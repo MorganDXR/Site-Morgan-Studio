@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Morgan Studio — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/discovery.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link rel="icon" type="image/png" href="./img/00_site_content/FAVICON_V2.ico" />
+</head>
+<body>
+<script src="js/loader.js"></script>
+
+  <!-- Curseur custom -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══ HEADER ══ -->
+  <header id="header">
+    <nav id="navbar">
+      <a href="index.html" aria-label="Retour accueil" class="nav-logo" style="display:inline-flex;align-items:center;line-height:0;position:relative;">
+        <svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1009.96 474.52" height="35" style="display:block;overflow:visible;" aria-hidden="true">
+          <defs><style>
+            #logo-svg .cls-1{transition:fill .35s ease;}
+            #logo-svg .cls-2{transition:fill .35s ease,opacity .35s ease;}
+            #logo-thumb{transition:cx .44s cubic-bezier(.34,1.56,.64,1),fill .35s ease;}
+            #logo-moon,#logo-sun{transition:opacity .35s ease;}
+            @keyframes logoPulse{0%,100%{opacity:.45}50%{opacity:0}}
+            #logo-moon.active,#logo-sun.active{animation:logoPulse 2.5s ease-in-out infinite;}
+          </style></defs>
+          <!-- MORGAN -->
+          <path class="cls-1" d="M60.51.94c3.23,34.98,12.38,69.4,15.92,104.31,2.8,27.69,2.19,55.87,4.01,83.6,3.69,1.06,2.29-3.42,2.37-5.57,1.14-29.17,1.59-58.41,4.98-87.39C91.39,65.04,101.81.94,101.81.94h62.2v214.97h-42.99c-1.96-62.93,4.66-125.48,11.14-187.89-4.09-1.34-4.2,4.73-4.58,7.33-3.28,22.57-4.92,45.46-8.42,68.03-5.85,37.7-13.85,74.98-20.45,112.51l-33.53-.68c-9.82-41.35-17.23-83.91-23.51-126.17-2.74-18.43-3.89-37.15-6.57-55.53-.4-2.72-.3-5.48-4.03-5.53l10.32,113.89,1.61,74.03H0V.94h60.51Z"/>
+          <path class="cls-1" d="M275.12,1.38c86.42-9.74,150.57,79.45,109.94,157.71-36.92,71.12-138,78.72-185.08,13.68C151.11,105.26,193.14,10.62,275.12,1.38ZM279.87,42.75c-85.21,10.88-70.93,139.75,13.9,133.32,87.15-6.6,75.78-144.77-13.9-133.32Z"/>
+          <path class="cls-1" d="M486.47.94c37.47,5.04,53.11,54.72,35.58,84.94-2.35,4.05-4.88,7.01-7.66,9.29-8.22,6.76-17.84,8.63-21.6,9.25-.99.16-1.82.27-2.37.33,0,.96.01,1.92.02,2.87,10.04.32,20.3,6.86,24.2,16.43l23.58,91.86h-42.99l-23.96-90.69-14.26-.07v90.76h-42.99V.94c22.56,2.19,50.57-2.94,72.45,0ZM457.01,85.33c14.76.96,27.28-1.35,28.74-18.23,1.85-21.44-7.93-28.85-28.74-26.36v44.59Z"/>
+          <path class="cls-1" d="M735.67,80.56h-42.99c-5.68-26.67-32.31-40.13-58.1-38.18-74.68,5.64-75.28,128.01,0,133.69,25.53,1.93,53.76-12.03,59.69-38.18h-54.14v-36.62h100.32v35.83c0,35.21-43.78,69.95-75.42,77.45-100,23.68-162.59-85.74-112.16-167.89,45.2-73.63,172.71-56.22,182.81,33.92Z"/>
+          <path class="cls-1" d="M740.45,215.91L774.79.87l61.18.08,33.45,214.95h-42.99l-6.54-49.19h-29.92l-6.54,49.19h-42.99ZM807.32,35.96h-4.76l-7.96,90.76h20.69l-7.96-90.76Z"/>
+          <path class="cls-1" d="M933.87.94s23.2,89.7,32.2,133.45c3.31,16.08,5.05,33.17,8.44,48.88.56,2.59,0,5.54,3.97,5.58-10.25-62.16-17.99-124.56-15.11-187.91h42.99v214.97h-47.77c-18.99-61.78-35.69-124.16-46.99-187.91-4.11-.6-2.11,2.82-1.92,5.12,2.65,31.84,11.91,65.28,13.86,97.62l1.61,85.18h-42.99V.94h51.7Z"/>
+          <!-- STUDIO -->
+          <path class="cls-1" d="M108.28,324.19h-39.81c-.09-9.96,2.99-30.32-11.94-30.34-9.83-.01-12.32,11.02-10.97,18.89,4.37,25.56,58.74,51.63,68.33,86.26,6.37,23.03.72,55.04-22.03,67.2C54.84,485.96,0,470.22,0,422.12v-24.68h41.4v27.87c0,1.73,5.22,8.81,7.5,10.01,16.96,8.94,26.64-8.19,23.95-23.96-2.89-16.99-39.53-40.94-52.11-56.16-41.74-50.48-8.83-116.69,58.16-94.78,12.86,4.21,29.38,20.15,29.38,34.32v29.46Z"/>
+          <polygon class="cls-1" points="230.89 257.31 230.89 297.12 197.45 297.12 197.45 472.28 154.46 472.28 154.46 297.12 121.02 297.12 121.02 257.31 230.89 257.31"/>
+          <path class="cls-1" d="M286.63,257.31v166.4c0,10.96,27.07,10.96,27.07,0v-166.4h42.99v171.18c0,31.28-37.29,47.71-64.46,45.36-20.17-1.75-48.59-19.91-48.59-42.17v-174.36h42.99Z"/>
+          <path class="cls-1" d="M375.8,472.28v-214.97h69.27c17.91,0,37.07,22.85,42.63,38.58,8.94,25.29,9.18,108.46,1.18,134.21-5.7,18.36-24.47,42.17-45.41,42.17h-67.68ZM418.79,432.47c14.53,1.52,24.13-2.21,29.11-16.28,4.91-13.86,4.09-71.02,2.81-88.09-1.52-20.24-9.42-33.9-31.92-30.98v135.35Z"/>
+          <rect class="cls-1" x="512.74" y="257.31" width="42.99" height="214.97"/>
+          <!-- TOGGLE TRACK -->
+          <path id="toggle-track" class="cls-2" d="M681.56,257.01c-4.3,0-8.68.23-13.12.73-81.94,9.24-124.01,103.89-75.14,171.39,21.79,30.1,55.09,44.63,88.26,44.55h220.06c59.83,0,108.34-48.5,108.34-108.34h0c0-59.83-48.5-108.34-108.34-108.34h-220.06Z"/>
+          <!-- THUMB -->
+          <circle id="logo-thumb" cx="681" cy="365.34" r="67" fill="var(--noir)"/>
+          <!-- LUNE -->
+          <g id="logo-moon" class="active">
+            <circle cx="681" cy="365" r="38" fill="#BBBFFF"/>
+            <circle cx="699" cy="352" r="30" fill="var(--noir)"/>
+            <circle cx="726" cy="308" r="5" fill="#BBBFFF" opacity="0.75"/>
+            <circle cx="745" cy="327" r="3.5" fill="#BBBFFF" opacity="0.55"/>
+            <circle cx="716" cy="297" r="3" fill="#BBBFFF" opacity="0.6"/>
+          </g>
+          <!-- SOLEIL -->
+          <g id="logo-sun" opacity="0">
+            <circle cx="901" cy="365.34" r="28" fill="#1a1a2e"/>
+            <line x1="901" y1="318" x2="901" y2="305" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="901" y1="412" x2="901" y2="425" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="854" y1="365.34" x2="841" y2="365.34" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="948" y1="365.34" x2="961" y2="365.34" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="867" y1="332" x2="858" y2="323" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="935" y1="399" x2="944" y2="408" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="935" y1="332" x2="944" y2="323" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="867" y1="399" x2="858" y2="408" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <button id="theme-toggle-btn" aria-label="Basculer mode clair/sombre" style="position:absolute;right:0px;top:18px;bottom:0px;width:31px;height:17px;background:none;border:none;padding:0;cursor:pointer;"></button>
+      </a>
+      <div class="nav-links">
+        <a href="./index.html">Accueil</a>
+       <a href="./portfolio.html">Projets</a>
+        <a href="./index.html#services">Services</a>
+        <a href="./index.html#about">À propos</a>
+        <a href="./index.html#faq">FAQ</a>
+        <a href="./decouverte.html" class="btn-nav btn-nav-call"><span>Réserver un appel</span>
+          <svg class="btn-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <svg class="menu-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="menu-path" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
+          <path d="M7 16 27 16"/>
+        </svg>
+      </button>
+
+      <div class="menu-dropdown">
+        <nav class="mobile-nav-links">
+          <a href="./index.html"  class="mobile-link"><span class="mobile-link-num">01</span>Accueil</a>
+          <a href="./portfolio.html" class="mobile-link"><span class="mobile-link-num">02</span>Projets</a>
+          <a href="./index.html#services" class="mobile-link"><span class="mobile-link-num">03</span>Services</a>
+          <a href="./index.html#about"   class="mobile-link"><span class="mobile-link-num">04</span>À propos</a>
+          <a href="./index.html#faq"       class="mobile-link"><span class="mobile-link-num">05</span>FAQ</a>
+        </nav>
+
+        <div class="mobile-menu-bottom">
+<a href="./decouverte.html" class="mobile-cta">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
+            Réserver un appel
+          </a>
+          <div class="mobile-menu-footer">
+            <span class="mobile-footer-copy">© 2026 Morgan Studio</span>
+            <div class="mobile-socials">
+              <a href="https://www.instagram.com/morganstudio_0ff/" class="mobile-social" aria-label="Instagram" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://fr.linkedin.com/" class="mobile-social" aria-label="LinkedIn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-left reveal reveal-left">
+      <div class="hero-tag">Tous les projets</div>
+      <h1 class="hero-title">Mes<br><span class="line-accent">créations</span>
+      </h1>
+    </div>
+    <div class="hero-right reveal reveal-right">
+      <p class="hero-desc">Identités, print, digital, illustration — tout ce que j'ai imaginé et réalisé, avec soin.</p>
+      <div class="hero-count">
+        15
+        <span>projets sélectionnés</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtres -->
+  <div id="filters" class="reveal reveal-stagger">
+    <span class="filter-label">Filtrer —</span>
+    <button class="filter-btn active" data-filter="all">Tout</button>
+    <button class="filter-btn" data-filter="branding">Identités Visuelles</button>
+    <button class="filter-btn" data-filter="print">Print</button>
+    <button class="filter-btn" data-filter="digital">Digital</button>
+    <button class="filter-btn" data-filter="illustration">Illustration</button>
+  </div>
+
+  <!-- Grille -->
+  <div id="grid">
+
+    <!-- 01 — APRL Events (grande carte héro) -->
+    <div class="project-card is-carousel"
+         data-category="branding"
+         data-title="APRL Events"
+         data-client="APRL Events — Micro-entreprise évènementielle"
+         data-year="2021"
+         data-role="Direction artistique, Identité visuelle complète"
+         data-desc="Conception de l'identité visuelle complète d'une micro-entreprise spécialisée dans l'évènementiel. Du logotype monochrome à la carte de visite, du catalogue de prestations à la carte de vœux — une identité cohérente, conçue pour tenir sur tous les supports print."
+         data-carousel="./img/01_branding/aprl_logo.webp|./img/02_print/aprl_carte_visite.webp|./img/02_print/aprl_catalogue.webp|./img/02_print/aprl_carte_voeux.webp">
+      <img class="card-img" src="./img/01_branding/aprl_logo.webp" alt="APRL Events" />
+      <div class="card-overlay"></div>
+      <span class="card-number">01</span>
+      <span class="card-tag">Identité Visuelle · Stage</span>
+      <div class="card-info">
+        <div class="card-title">APRL Events</div>
+        <div class="card-meta">Évènementiel · 2021</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 02 — Cinéma Les 5 Caumartin -->
+    <div class="project-card is-carousel"
+         data-category="print"
+         data-title="Les 5 Caumartin"
+         data-client="Cinéma Les 5 Caumartin — Paris"
+         data-year="2024 – 2025"
+         data-role="Direction artistique, Communication print & digital"
+         data-desc="Création des supports de communication pour le cinéma indépendant Les 5 Caumartin, à Paris. Visuels pour les formules pop-corn, refonte du menu confiserie et badge Coup de cœur de la directrice."
+         data-carousel="./img/03_digital/formule_01.webp|./img/03_digital/formule_02.webp|./img/02_print/menu_5caumartin.webp|./img/01_branding/logo_directrice_5C.webp">
+      <img class="card-img" src="./img/03_digital/formule_01.webp" alt="Cinéma Les 5 Caumartin" />
+      <div class="card-overlay"></div>
+      <span class="card-number">02</span>
+      <span class="card-tag">Print · Alternance</span>
+      <div class="card-info">
+        <div class="card-title">Les 5 Caumartin</div>
+        <div class="card-meta">Cinéma indépendant · 2024–2025</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 03 — Non au Harcèlement -->
+    <div class="project-card"
+         data-category="print"
+         data-title="Non au Harcèlement"
+         data-client="Ministère de l'Éducation nationale"
+         data-year="2020"
+         data-role="Design print, Photographie, Communication sociale"
+         data-desc="Affiche récompensée par le Prix académique de l'académie de Créteil au concours Non au Harcèlement du Ministère de l'Éducation nationale. Une mise en scène photographique dans un couloir de lycée : des mots projetés en ombre au sol pour matérialiser le poids des insultes. Sobre et percutant.">
+      <img class="card-img" src="./img/02_print/affiche_harcèlement.webp" alt="Non au Harcèlement" />
+      <div class="card-overlay"></div>
+      <span class="card-number">03</span>
+      <span class="card-tag">Print · Prix académique</span>
+      <div class="card-info">
+        <div class="card-title">Non au Harcèlement</div>
+        <div class="card-meta">Éducation nationale · 2020</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 04 — Ancienne Gare de Bobigny -->
+    <div class="project-card"
+         data-category="print"
+         data-title="Ancienne Gare de déportation"
+         data-client="Mémorial de l'ancienne gare de déportation de Bobigny"
+         data-year="2023"
+         data-role="Affiche événementielle, Direction artistique"
+         data-desc="Sélectionné par mes professeurs pour représenter mon lycée lors de l'inauguration officielle de l'ancienne gare de déportation de Bobigny, site mémorial de la Shoah. L'affiche joue sur une photographie désaturée des rails et un trait rouge symbolique — un équilibre entre mémoire, sobriété et dignité.">
+      <img class="card-img" src="./img/02_print/affiche_gare_memorial.webp" alt="Gare de Bobigny" />
+      <div class="card-overlay"></div>
+      <span class="card-number">04</span>
+      <span class="card-tag">Print</span>
+      <div class="card-info">
+        <div class="card-title">Ancienne Gare de déportation</div>
+        <div class="card-meta">Mémorial · 2023</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 05 — Réseaux Sociaux -->
+    <div class="project-card is-carousel"
+         data-category="digital"
+         data-title="Réseaux Sociaux"
+         data-client="Brief fictif"
+         data-year="2023"
+         data-role="Direction artistique, Création de contenus réseaux sociaux"
+         data-desc="Création de contenus Instagram fictifs pour deux marques. Morphea France : visuels produits pour une marque de matelas haut de gamme (carousel produit, témoignage client, opération soldes). Rose Bonbon Paris : communication événementielle pour un lieu festif parisien."
+         data-carousel="./img/03_digital/morphea_01.webp|./img/03_digital/morphea_02.webp|./img/03_digital/morphea_03.webp|./img/03_digital/rose_bonbon_01.webp|./img/03_digital/rose_bonbon_02.webp|./img/03_digital/rose_bonbon_03.webp">
+      <img class="card-img" src="./img/03_digital/morphea_01.webp" alt="Social Media" />
+      <div class="card-overlay"></div>
+      <span class="card-number">05</span>
+      <span class="card-tag">Digital · Réseaux sociaux</span>
+      <div class="card-info">
+        <div class="card-title">Réseaux Sociaux</div>
+        <div class="card-meta">Brief fictif · 2023</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 06 — Saut Hermès -->
+    <div class="project-card"
+         data-category="print"
+         data-title="Saut Hermès"
+         data-client="Brief fictif"
+         data-year="2024"
+         data-role="Affiche événementielle, Direction artistique"
+         data-desc="Direction artistique fictive autour du Saut Hermès, jumping international CS5 au Grand Palais Éphémère. Typographie fragmentée, mouvement et palette sombre pour restituer l'énergie et le prestige de l'événement — un traitement graphique ancré dans l'univers équestre.">
+      <img class="card-img" src="./img/02_print/affiche_saut_hermes.webp" alt="Saut Hermès" />
+      <div class="card-overlay"></div>
+      <span class="card-number">06</span>
+      <span class="card-tag">Print</span>
+      <div class="card-info">
+        <div class="card-title">Saut Hermès</div>
+        <div class="card-meta">Brief fictif · 2024</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 07 — American Dream -->
+    <div class="project-card"
+         data-category="print"
+         data-title="American Dream"
+         data-client="Brief fictif"
+         data-year="2023"
+         data-role="Affiche typographique, Direction artistique"
+         data-desc="Concept d'affiche fictive pour un événement culturel imaginaire. La répétition typographique du titre et un dégradé rouge-bleu convoquent les codes visuels du mythe américain — une composition volontairement saturée de sens.">
+      <img class="card-img" src="./img/02_print/affiche_ad.webp" alt="American Dream" />
+      <div class="card-overlay"></div>
+      <span class="card-number">07</span>
+      <span class="card-tag">Print</span>
+      <div class="card-info">
+        <div class="card-title">American Dream</div>
+        <div class="card-meta">Brief fictif · 2023</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 08 — Le Méliès -->
+    <div class="project-card"
+         data-category="print"
+         data-title="Le Méliès"
+         data-client="Brief fictif"
+         data-year="2025"
+         data-role="Affiche événementielle, Design print"
+         data-desc="Affiche fictive pour les 10 ans du cinéma Le Méliès à Montreuil. L'univers du cinéma muet comme fil conducteur — taches d'encre watercolor, et atmosphère vintage pour rendre hommage à un lieu culturel ancré dans son quartier.">
+      <img class="card-img" src="./img/02_print/affiche_melies.webp" alt="Le Méliès" />
+      <div class="card-overlay"></div>
+      <span class="card-number">08</span>
+      <span class="card-tag">Print</span>
+      <div class="card-info">
+        <div class="card-title">Le Méliès</div>
+        <div class="card-meta">Brief fictif · 2025</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 09 — AIDES -->
+    <div class="project-card"
+         data-category="print"
+         data-title="AIDES — Agissons"
+         data-client="Brief fictif"
+         data-year="2023"
+         data-role="Design print, Communication sociale"
+         data-desc="Affiche fictive de campagne pour l'association AIDES. Une tension visuelle entre discutons barré et agissons qui s'impose.">
+      <img class="card-img" src="./img/02_print/affiche_aides.webp" alt="AIDES Agissons" />
+      <div class="card-overlay"></div>
+      <span class="card-number">09</span>
+      <span class="card-tag">Print</span>
+      <div class="card-info">
+        <div class="card-title">AIDES — Agissons</div>
+        <div class="card-meta">Brief fictif · 2023</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 10 — Aurora -->
+    <div class="project-card"
+         data-category="illustration"
+         data-title="Aurora — Cure For Me"
+         data-client="Brief fictif"
+         data-year="2024"
+         data-role="Illustration, Design packaging, Direction artistique"
+         data-desc="Conception fictive d'une pochette vinyle pour le titre Cure For Me d'Aurora. Une forme abstraite en 3D, suspendue dans un espace bleu profond — pensée pour que l'on ressente la musique avant de la comprendre. Texture dorée, composition minimaliste, tension émotionnelle : quelque chose de doux et de douloureux à la fois.">
+      <img class="card-img" src="./img/04_illustration/couverture_mockup.webp" alt="Aurora Cure For Me" />
+      <div class="card-overlay"></div>
+      <span class="card-number">10</span>
+      <span class="card-tag">Illustration</span>
+      <div class="card-info">
+        <div class="card-title">Aurora — Cure For Me</div>
+        <div class="card-meta">Brief fictif · 2024</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 11 — DEZY -->
+    <div class="project-card is-carousel"
+         data-category="branding"
+         data-title="DEZY"
+         data-client="Projet personnel"
+         data-year="2023"
+         data-role="Identité visuelle, Direction artistique, Typographie"
+         data-carousel="./img/01_branding/dezy_logo.webp|./img/03_digital/dezy_visual_01.webp|./img/03_digital/dezy_visual_02.webp"
+         data-desc="Identité visuelle pour DEZY, une plateforme fictive imaginée pour mettre en lumière les jeunes talents du design. Logotype, exploration typographique et charte graphique — style international suisse rencontrant le flat design. Un projet développé en autonomie qui a posé les bases de ma direction artistique.">
+      <img class="card-img" src="./img/01_branding/dezy_logo.webp" alt="DEZY" />
+      <div class="card-overlay"></div>
+      <span class="card-number">11</span>
+      <span class="card-tag">Identité Visuelle · Perso</span>
+      <div class="card-info">
+        <div class="card-title">DEZY</div>
+        <div class="card-meta">Projet personnel · 2023</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+<!-- 12 — Illustration Anafe -->
+    <div class="project-card"
+         data-category="illustration"
+         data-title="Illustration École Web Design"
+         data-client="École de design web"
+         data-year="2024"
+         data-role="Illustration, Direction artistique"
+         data-desc="Illustration réalisée pour une école de design web dans le cadre d'un brief fictif. Composition dynamique mêlant personnage, éléments UI et formes graphiques — une exploration du monde du design numérique.">
+      <img class="card-img" src="./img/04_illustration/illustration_anafe.webp" alt="Illustration École Web Design" />
+      <div class="card-overlay"></div>
+      <span class="card-number">12</span>
+      <span class="card-tag">Illustration</span>
+      <div class="card-info">
+        <div class="card-title">Illustration École Web Design</div>
+        <div class="card-meta">Illustration · 2024</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+<!-- 13 — Faire Part -->
+    <div class="project-card"
+         data-category="print"
+         data-title="Faire-part Manon & Stiven"
+         data-client="APRL Events"
+         data-year="2022"
+         data-role="Illustration, Print, Direction artistique"
+         data-desc="Faire-part de mariage réalisé en lien avec APRL Events. Illustration florale aquarelle, silhouettes des mariés et typographie calligraphique pour un rendu élégant et chaleureux.">
+      <img class="card-img" src="./img/02_print/faire_part.webp" alt="Faire-part Manon & Stiven" />
+      <div class="card-overlay"></div>
+      <span class="card-number">13</span>
+      <span class="card-tag">Print · Illustration</span>
+      <div class="card-info">
+        <div class="card-title">Faire-part Manon & Stiven</div>
+        <div class="card-meta">APRL Events · 2022</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 14 — Identités visuelles -->
+    <div class="project-card is-carousel"
+         data-category="branding"
+         data-title="Identités visuelles"
+         data-client="Brief fictif & personnel"
+         data-year="2024 – 2025"
+         data-role="Conception de logotypes, Direction artistique"
+         data-carousel="./img/01_branding/comme_avant_logo.webp|./img/01_branding/anafe_logo.webp"
+         data-desc="Sélection de logotypes fictifs conçus pour des briefs variés. Comme Avant : marque éco-responsable, univers végétal et typographie douce. Anafe : identité sobre et contemporaine.">
+      <img class="card-img" src="./img/01_branding/comme_avant_logo.webp" alt="Identités visuelles" />
+      <div class="card-overlay"></div>
+      <span class="card-number">14</span>
+      <span class="card-tag">Identité Visuelle</span>
+      <div class="card-info">
+        <div class="card-title">Identités visuelles</div>
+        <div class="card-meta">Brief fictif &amp; perso · 2022–2024</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 15 — designer. -->
+    <div class="project-card is-carousel"
+         data-category="branding"
+         data-title="designer."
+         data-client="Projet personnel"
+         data-year="2020"
+         data-role="Direction artistique, Retouche photo, Typographie"
+         data-carousel="./img/01_branding/designer.webp|./img/03_digital/create_to_live.webp|./img/03_digital/red_blue.webp|./img/03_digital/new_design_ideas.webp"
+         data-desc="Premières explorations créatives réalisées à 15 ans. Typographie expressive, manipulations photographiques, doubles expositions — des expérimentations libres, sans brief ni contrainte, qui ont forgé mon œil et posé les premières briques de ma direction artistique. Le point de départ de tout.">
+      <img class="card-img" src="./img/01_branding/designer.webp" alt="designer." />
+      <div class="card-overlay"></div>
+      <span class="card-number">15</span>
+      <span class="card-tag">identité visuelle · Perso</span>
+      <div class="card-info">
+        <div class="card-title">designer.</div>
+        <div class="card-meta">Projet personnel · 2020</div>
+        <a class="card-cta" href="#">Voir le projet <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 10L10 2M4 2h6v6"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bande défilante -->
+  <div id="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+      <div class="marquee-item"><span class="dot"></span>Identité visuelle</div>
+      <div class="marquee-item"><span class="dot"></span>Print</div>
+      <div class="marquee-item"><span class="dot"></span>Packaging</div>
+      <div class="marquee-item"><span class="dot"></span>Réseaux Sociaux</div>
+      <div class="marquee-item"><span class="dot"></span>Illustration</div>
+      <div class="marquee-item"><span class="dot"></span>Direction artistique</div>
+      <div class="marquee-item"><span class="dot"></span>Typographie</div>
+      <div class="marquee-item"><span class="dot"></span>Signalétique</div>
+      <div class="marquee-item"><span class="dot"></span>Identité visuelle</div>
+      <div class="marquee-item"><span class="dot"></span>Print</div>
+      <div class="marquee-item"><span class="dot"></span>Packaging</div>
+      <div class="marquee-item"><span class="dot"></span>Réseaux Sociaux</div>
+      <div class="marquee-item"><span class="dot"></span>Illustration</div>
+      <div class="marquee-item"><span class="dot"></span>Direction artistique</div>
+      <div class="marquee-item"><span class="dot"></span>Typographie</div>
+      <div class="marquee-item"><span class="dot"></span>Signalétique</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section id="cta">
+    <span class="cta-label reveal reveal-up">La suite ?</span>
+    <h2 class="cta-title reveal reveal-up">Parlez moi<br>de<span class="accent"> votre projet</span> ?</h2>
+    <div class="cta-actions reveal reveal-up">
+      <a href="decouverte.html" class="btn-secondary">Me contacter <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" width="13" height="13"><path d="M5 15L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M8 5H15V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1009.96 474.52" aria-label="Morgan Studio" role="img">
+          <defs><style>
+            .footer-logo .cls-1{transition:fill .35s ease;}
+            .footer-logo .cls-2{transition:fill .35s ease,opacity .35s ease;}
+            #logo-thumb-footer{transition:cx .44s cubic-bezier(.34,1.56,.64,1),fill .35s ease;}
+            #logo-moon-footer,#logo-sun-footer{transition:opacity .35s ease;}
+            @keyframes logoPulseFooter{0%,100%{opacity:.45}50%{opacity:0}}
+            #logo-moon-footer.active,#logo-sun-footer.active{animation:logoPulseFooter 2.5s ease-in-out infinite;}
+          </style></defs>
+          <path class="cls-1" d="M60.51.94c3.23,34.98,12.38,69.4,15.92,104.31,2.8,27.69,2.19,55.87,4.01,83.6,3.69,1.06,2.29-3.42,2.37-5.57,1.14-29.17,1.59-58.41,4.98-87.39C91.39,65.04,101.81.94,101.81.94h62.2v214.97h-42.99c-1.96-62.93,4.66-125.48,11.14-187.89-4.09-1.34-4.2,4.73-4.58,7.33-3.28,22.57-4.92,45.46-8.42,68.03-5.85,37.7-13.85,74.98-20.45,112.51l-33.53-.68c-9.82-41.35-17.23-83.91-23.51-126.17-2.74-18.43-3.89-37.15-6.57-55.53-.4-2.72-.3-5.48-4.03-5.53l10.32,113.89,1.61,74.03H0V.94h60.51Z"/>
+          <path class="cls-1" d="M275.12,1.38c86.42-9.74,150.57,79.45,109.94,157.71-36.92,71.12-138,78.72-185.08,13.68C151.11,105.26,193.14,10.62,275.12,1.38ZM279.87,42.75c-85.21,10.88-70.93,139.75,13.9,133.32,87.15-6.6,75.78-144.77-13.9-133.32Z"/>
+          <path class="cls-1" d="M486.47.94c37.47,5.04,53.11,54.72,35.58,84.94-2.35,4.05-4.88,7.01-7.66,9.29-8.22,6.76-17.84,8.63-21.6,9.25-.99.16-1.82.27-2.37.33,0,.96.01,1.92.02,2.87,10.04.32,20.3,6.86,24.2,16.43l23.58,91.86h-42.99l-23.96-90.69-14.26-.07v90.76h-42.99V.94c22.56,2.19,50.57-2.94,72.45,0ZM457.01,85.33c14.76.96,27.28-1.35,28.74-18.23,1.85-21.44-7.93-28.85-28.74-26.36v44.59Z"/>
+          <path class="cls-1" d="M735.67,80.56h-42.99c-5.68-26.67-32.31-40.13-58.1-38.18-74.68,5.64-75.28,128.01,0,133.69,25.53,1.93,53.76-12.03,59.69-38.18h-54.14v-36.62h100.32v35.83c0,35.21-43.78,69.95-75.42,77.45-100,23.68-162.59-85.74-112.16-167.89,45.2-73.63,172.71-56.22,182.81,33.92Z"/>
+          <path class="cls-1" d="M740.45,215.91L774.79.87l61.18.08,33.45,214.95h-42.99l-6.54-49.19h-29.92l-6.54,49.19h-42.99ZM807.32,35.96h-4.76l-7.96,90.76h20.69l-7.96-90.76Z"/>
+          <path class="cls-1" d="M933.87.94s23.2,89.7,32.2,133.45c3.31,16.08,5.05,33.17,8.44,48.88.56,2.59,0,5.54,3.97,5.58-10.25-62.16-17.99-124.56-15.11-187.91h42.99v214.97h-47.77c-18.99-61.78-35.69-124.16-46.99-187.91-4.11-.6-2.11,2.82-1.92,5.12,2.65,31.84,11.91,65.28,13.86,97.62l1.61,85.18h-42.99V.94h51.7Z"/>
+          <path class="cls-1" d="M108.28,324.19h-39.81c-.09-9.96,2.99-30.32-11.94-30.34-9.83-.01-12.32,11.02-10.97,18.89,4.37,25.56,58.74,51.63,68.33,86.26,6.37,23.03.72,55.04-22.03,67.2C54.84,485.96,0,470.22,0,422.12v-24.68h41.4v27.87c0,1.73,5.22,8.81,7.5,10.01,16.96,8.94,26.64-8.19,23.95-23.96-2.89-16.99-39.53-40.94-52.11-56.16-41.74-50.48-8.83-116.69,58.16-94.78,12.86,4.21,29.38,20.15,29.38,34.32v29.46Z"/>
+          <polygon class="cls-1" points="230.89 257.31 230.89 297.12 197.45 297.12 197.45 472.28 154.46 472.28 154.46 297.12 121.02 297.12 121.02 257.31 230.89 257.31"/>
+          <path class="cls-1" d="M286.63,257.31v166.4c0,10.96,27.07,10.96,27.07,0v-166.4h42.99v171.18c0,31.28-37.29,47.71-64.46,45.36-20.17-1.75-48.59-19.91-48.59-42.17v-174.36h42.99Z"/>
+          <path class="cls-1" d="M375.8,472.28v-214.97h69.27c17.91,0,37.07,22.85,42.63,38.58,8.94,25.29,9.18,108.46,1.18,134.21-5.7,18.36-24.47,42.17-45.41,42.17h-67.68ZM418.79,432.47c14.53,1.52,24.13-2.21,29.11-16.28,4.91-13.86,4.09-71.02,2.81-88.09-1.52-20.24-9.42-33.9-31.92-30.98v135.35Z"/>
+          <rect class="cls-1" x="512.74" y="257.31" width="42.99" height="214.97"/>
+          <path id="toggle-track-footer" class="cls-2" d="M681.56,257.01c-4.3,0-8.68.23-13.12.73-81.94,9.24-124.01,103.89-75.14,171.39,21.79,30.1,55.09,44.63,88.26,44.55h220.06c59.83,0,108.34-48.5,108.34-108.34h0c0-59.83-48.5-108.34-108.34-108.34h-220.06Z"/>
+          <circle id="logo-thumb-footer" cx="681" cy="365.34" r="67" fill="var(--noir)"/>
+
+        </svg>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/morganstudio_0ff/" aria-label="Instagram" class="social-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://fr.linkedin.com/" aria-label="LinkedIn" class="social-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <span>© 2026 Morgan Studio</span>
+          <span>Tous droits réservés</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="./index.html">Accueil</a>
+          <a href="./portfolio.html">Projets</a>
+          <a href="./index.html#services">Services</a>
+          <a href="./index.html#about">À propos</a>
+          <a href="./index.html#faq">FAQ</a>
+        </nav>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Politique de confidentialité</a>
+          <a href="cgv.html">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modale -->
+  <div id="modal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-content">
+      <div class="modal-img-panel">
+        <img class="modal-img" id="modalImg" src="" alt="" />
+        <div class="modal-carousel" id="modalCarousel">
+          <div class="carousel-track" id="carouselTrack"></div>
+          <button class="carousel-btn carousel-prev" id="carouselPrev"><svg class="arrow-icon" viewBox="0 0 20 20" fill="none" width="13" height="13"><path d="M17 10H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M9 4L3 10L9 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="carousel-btn carousel-next" id="carouselNext"><svg class="arrow-icon" viewBox="0 0 20 20" fill="none" width="13" height="13"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+        <div class="modal-img-num" id="modalNum"></div>
+      </div>
+      <div class="modal-body">
+        <span class="modal-tag" id="modalTag"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-meta">
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Client</span>
+            <span class="modal-meta-value" id="modalClient"></span>
+          </div>
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Année</span>
+            <span class="modal-meta-value" id="modalYear"></span>
+          </div>
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">Rôle</span>
+            <span class="modal-meta-value" id="modalRole"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/portfolio.js"></script>
+  
+  <script>
+    /* FIX : Email anti-scraping — remplace le lien Cloudflare cassé */
+    document.querySelectorAll('.email-obf').forEach(function(el) {
+      var addr = el.dataset.u + '@' + el.dataset.d;
+      el.querySelector('svg') // keep the svg, update only text node
+      // reconstruct text after svg
+      var nodes = Array.from(el.childNodes);
+      nodes.forEach(function(n) { if (n.nodeType === 3) el.removeChild(n); });
+      el.appendChild(document.createTextNode(' ' + el.dataset.u + ' [at] ' + el.dataset.d));
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'mailto:' + addr;
+      });
+      el.addEventListener('mouseenter', function() {
+        var nodes = Array.from(el.childNodes);
+        nodes.forEach(function(n) { if (n.nodeType === 3) el.removeChild(n); });
+        el.appendChild(document.createTextNode(' ' + addr));
+      });
+      el.addEventListener('mouseleave', function() {
+        var nodes = Array.from(el.childNodes);
+        nodes.forEach(function(n) { if (n.nodeType === 3) el.removeChild(n); });
+        el.appendChild(document.createTextNode(' ' + el.dataset.u + ' [at] ' + el.dataset.d));
+      });
+    });
+  </script>
+  <script src="js/carousel.js"></script>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="js/animated-text.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/scrollbar.js"></script>
+  <script src="js/offre-lancement.js"></script>
+  
+</body>
+</html>

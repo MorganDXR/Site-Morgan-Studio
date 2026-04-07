@@ -1,0 +1,319 @@
+/* ═══════════════════════════════════════════════
+   MORGAN STUDIO — carousel.css
+═══════════════════════════════════════════════ */
+
+/* ── Section ── */
+#horizontal-carousel {
+  position: relative;
+  background: var(--bleu-nuit);
+}
+
+.hc-section {
+  position: relative;
+  height: 300vh;
+}
+
+/* ── Sticky viewport ── */
+.hc-sticky {
+  /* position et hauteur gérées dynamiquement par carousel.js */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ── Hint scroll ── */
+.hc-scroll-hint {
+  position: absolute;
+  bottom: 2.4rem;
+  left: 6vw;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gris);
+  transition: opacity .5s ease;
+  z-index: 2;
+}
+.hc-scroll-hint svg {
+  width: 13px; height: 13px;
+  animation: hc-hint-nudge 1.8s ease-in-out infinite;
+}
+@keyframes hc-hint-nudge {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(6px); }
+}
+.hc-scroll-hint.hidden { opacity: 0; pointer-events: none; }
+
+/* ── Track ── */
+.hc-track {
+  display: flex;
+  gap: 16px;
+  padding: 0 6vw;
+  will-change: transform;
+  align-items: center;
+}
+
+/* ══════════════════════════════════════
+   CARTES IMAGE
+══════════════════════════════════════ */
+.hc-card {
+  position: relative;
+  /* Hauteur commune — largeur varie par carte selon ratio image */
+  height: clamp(320px, 42vw, 500px);
+  width: clamp(320px, 42vw, 500px); /* fallback 1:1 */
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--gris-fin);
+  cursor: none;
+  /* État initial reveal */
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .7s cubic-bezier(.22,1,.36,1),
+              transform .7s cubic-bezier(.22,1,.36,1),
+              box-shadow .5s ease;
+}
+
+/* ── Largeur par carte = hauteur × ratio image ── */
+/* Carte 01 — aprl_logo 1:1 */
+.hc-card:nth-child(1) { width: clamp(320px, 42vw, 500px); }
+/* Carte 02 — affiche_ad portrait 0.705 */
+.hc-card:nth-child(2) { width: clamp(226px, calc(42vw * 0.705), 353px); }
+/* Carte 03 — red_blue 1:1 */
+.hc-card:nth-child(3) { width: clamp(320px, 42vw, 500px); }
+/* Carte 04 — couverture_mockup 1:1 */
+.hc-card:nth-child(4) { width: clamp(320px, 42vw, 500px); }
+.hc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 64px rgba(0,0,0,.6);
+}
+
+/* Visible après entrée dans le viewport horizontal */
+.hc-card.hc-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger par ordre d'apparition */
+.hc-card.hc-card--visible:nth-child(1) { transition-delay: 0ms; }
+.hc-card.hc-card--visible:nth-child(2) { transition-delay: 60ms; }
+.hc-card.hc-card--visible:nth-child(3) { transition-delay: 0ms; }
+.hc-card.hc-card--visible:nth-child(4) { transition-delay: 0ms; }
+.hc-card.hc-card--visible:nth-child(5) { transition-delay: 0ms; }
+/* Hover uniquement quand visible */
+.hc-card.hc-card--visible:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 64px rgba(0,0,0,.6);
+}
+
+/* ── Image ── */
+.hc-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform .6s cubic-bezier(.4,0,.2,1);
+}
+.hc-card:hover .hc-card-img {
+  transform: scale(1.06);
+}
+
+/* ── Overlay permanent discret (dégradé bas) ── */
+.hc-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10,10,20,.7)  0%,
+    rgba(10,10,20,.15) 40%,
+    transparent        70%
+  );
+  z-index: 1;
+  transition: opacity .35s cubic-bezier(.4,0,.2,1);
+}
+.hc-card:hover::after {
+  opacity: 1.4; /* renforce légèrement au hover */
+}
+
+/* Exception : pas de pseudo-overlay sur la carte intro */
+.hc-card--portfolio-intro::after { display: none; }
+
+/* ── Tag catégorie ── */
+.hc-card-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: var(--bleu-clair);
+  background: rgba(15,15,25,.65);
+  border: 1px solid rgba(187,191,255,.2);
+  padding: 5px 12px;
+  border-radius: 100px;
+  z-index: 2;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background .3s, border-color .3s, transform .3s cubic-bezier(.4,0,.2,1);
+}
+.hc-card:hover .hc-card-tag {
+  background: rgba(91,91,214,.55);
+  border-color: rgba(187,191,255,.45);
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════
+   CARTE PORTFOLIO INTRO (dernière)
+══════════════════════════════════════ */
+.hc-card--portfolio-intro {
+  background: var(--noir);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(280px, 34vw, 420px);
+  cursor: default;
+  overflow: hidden;
+}
+
+/* Neutralise le hover de la carte générique */
+.hc-card--portfolio-intro:hover {
+  transform: none;
+  box-shadow: none;
+}
+.hc-card--portfolio-intro:hover .hc-card-img {
+  transform: none;
+}
+
+.hc-portfolio-intro-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 44px 36px;
+  width: 100%;
+}
+
+.hc-portfolio-intro-inner .section-label {
+  margin-bottom: 4px;
+}
+
+.hc-portfolio-intro-inner .portfolio-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 2.8rem);
+  line-height: 1.35;
+  color: var(--blanc);
+  margin: 0;
+}
+
+.hc-portfolio-intro-inner .portfolio-title span {
+  color: var(--bleu-clair);
+}
+
+.hc-portfolio-intro-inner .portfolio-desc {
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--gris);
+  margin: 0;
+}
+
+.hc-portfolio-intro-inner .btn {
+  margin-top: 8px;
+}
+
+/* ══════════════════════════════════════
+   BARRE DE PROGRESSION + COMPTEUR
+══════════════════════════════════════ */
+.hc-progress {
+  position: absolute;
+  bottom: 2.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(120px, 20vw, 280px);
+  height: 2px;
+  background: rgba(255,255,255,.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hc-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--bleu-clair);
+  border-radius: 2px;
+  transition: width .08s linear;
+}
+
+.hc-counter {
+  position: absolute;
+  bottom: 2.2rem;
+  right: 6vw;
+  font-family: var(--font-body);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  /* Hauteur commune : toutes les cartes alignées sur la même ligne */
+  .hc-card:nth-child(1),
+  .hc-card:nth-child(2),
+  .hc-card:nth-child(3),
+  .hc-card:nth-child(4) { height: 72vw !important; }
+
+  /* Largeur = hauteur × ratio de l'image */
+  .hc-card:nth-child(1) { width: 72vw !important; }           /* 1:1 */
+  .hc-card:nth-child(2) { width: calc(72vw * 0.705) !important; } /* portrait 1409:2000 */
+  .hc-card:nth-child(3) { width: 72vw !important; }           /* 1:1 */
+  .hc-card:nth-child(4) { width: 72vw !important; }           /* 1:1 */
+
+  /* Carte intro : même hauteur que les autres, largeur fixe */
+  .hc-card--portfolio-intro {
+    width: 72vw !important;
+    height: 72vw !important;
+    min-height: unset;
+  }
+
+  .hc-portfolio-intro-inner {
+    padding: 28px 24px;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+  }
+  .hc-card--portfolio-intro .portfolio-title,
+  .hc-card--portfolio-intro .portfolio-desc {
+    text-align: left;
+  }
+
+  .hc-portfolio-intro-inner .portfolio-title {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+    line-height: 1.2;
+  }
+
+  .hc-portfolio-intro-inner .portfolio-desc {
+    font-size: .78rem;
+    line-height: 1.45;
+  }
+
+  .hc-portfolio-intro-inner .btn {
+    margin-top: 4px;
+    font-size: .82rem;
+    padding: .6rem 1.2rem;
+  }
+
+  .hc-track              { gap: 12px; align-items: center; }
+  .hc-card-tag           { opacity: 1; transform: none; }
+}

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Morgan Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/discovery.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="icon" type="image/x-icon" href="./FAVICON_V2.ico" />
+
+  <script>history.scrollRestoration = "manual"; window.scrollTo(0, 0);</script>
+</head>
+<body>
+<script src="js/loader.js"></script>
+
+  <!-- Curseur custom -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══ HEADER ══ -->
+  <header id="header">
+    <nav id="navbar">
+      <a href="index.html" aria-label="Retour accueil" class="nav-logo" style="display:inline-flex;align-items:center;line-height:0;position:relative;">
+        <svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1009.96 474.52" height="35" style="display:block;overflow:visible;" aria-hidden="true">
+          <defs><style>
+            #logo-svg .cls-1{transition:fill .35s ease;}
+            #logo-svg .cls-2{transition:fill .35s ease,opacity .35s ease;}
+            #logo-thumb{transition:cx .44s cubic-bezier(.34,1.56,.64,1),fill .35s ease;}
+            #logo-moon,#logo-sun{transition:opacity .35s ease;}
+            @keyframes logoPulse{0%,100%{opacity:.45}50%{opacity:0}}
+            #logo-moon.active,#logo-sun.active{animation:logoPulse 2.5s ease-in-out infinite;}
+          </style></defs>
+          <!-- MORGAN -->
+          <path class="cls-1" d="M60.51.94c3.23,34.98,12.38,69.4,15.92,104.31,2.8,27.69,2.19,55.87,4.01,83.6,3.69,1.06,2.29-3.42,2.37-5.57,1.14-29.17,1.59-58.41,4.98-87.39C91.39,65.04,101.81.94,101.81.94h62.2v214.97h-42.99c-1.96-62.93,4.66-125.48,11.14-187.89-4.09-1.34-4.2,4.73-4.58,7.33-3.28,22.57-4.92,45.46-8.42,68.03-5.85,37.7-13.85,74.98-20.45,112.51l-33.53-.68c-9.82-41.35-17.23-83.91-23.51-126.17-2.74-18.43-3.89-37.15-6.57-55.53-.4-2.72-.3-5.48-4.03-5.53l10.32,113.89,1.61,74.03H0V.94h60.51Z"/>
+          <path class="cls-1" d="M275.12,1.38c86.42-9.74,150.57,79.45,109.94,157.71-36.92,71.12-138,78.72-185.08,13.68C151.11,105.26,193.14,10.62,275.12,1.38ZM279.87,42.75c-85.21,10.88-70.93,139.75,13.9,133.32,87.15-6.6,75.78-144.77-13.9-133.32Z"/>
+          <path class="cls-1" d="M486.47.94c37.47,5.04,53.11,54.72,35.58,84.94-2.35,4.05-4.88,7.01-7.66,9.29-8.22,6.76-17.84,8.63-21.6,9.25-.99.16-1.82.27-2.37.33,0,.96.01,1.92.02,2.87,10.04.32,20.3,6.86,24.2,16.43l23.58,91.86h-42.99l-23.96-90.69-14.26-.07v90.76h-42.99V.94c22.56,2.19,50.57-2.94,72.45,0ZM457.01,85.33c14.76.96,27.28-1.35,28.74-18.23,1.85-21.44-7.93-28.85-28.74-26.36v44.59Z"/>
+          <path class="cls-1" d="M735.67,80.56h-42.99c-5.68-26.67-32.31-40.13-58.1-38.18-74.68,5.64-75.28,128.01,0,133.69,25.53,1.93,53.76-12.03,59.69-38.18h-54.14v-36.62h100.32v35.83c0,35.21-43.78,69.95-75.42,77.45-100,23.68-162.59-85.74-112.16-167.89,45.2-73.63,172.71-56.22,182.81,33.92Z"/>
+          <path class="cls-1" d="M740.45,215.91L774.79.87l61.18.08,33.45,214.95h-42.99l-6.54-49.19h-29.92l-6.54,49.19h-42.99ZM807.32,35.96h-4.76l-7.96,90.76h20.69l-7.96-90.76Z"/>
+          <path class="cls-1" d="M933.87.94s23.2,89.7,32.2,133.45c3.31,16.08,5.05,33.17,8.44,48.88.56,2.59,0,5.54,3.97,5.58-10.25-62.16-17.99-124.56-15.11-187.91h42.99v214.97h-47.77c-18.99-61.78-35.69-124.16-46.99-187.91-4.11-.6-2.11,2.82-1.92,5.12,2.65,31.84,11.91,65.28,13.86,97.62l1.61,85.18h-42.99V.94h51.7Z"/>
+          <!-- STUDIO -->
+          <path class="cls-1" d="M108.28,324.19h-39.81c-.09-9.96,2.99-30.32-11.94-30.34-9.83-.01-12.32,11.02-10.97,18.89,4.37,25.56,58.74,51.63,68.33,86.26,6.37,23.03.72,55.04-22.03,67.2C54.84,485.96,0,470.22,0,422.12v-24.68h41.4v27.87c0,1.73,5.22,8.81,7.5,10.01,16.96,8.94,26.64-8.19,23.95-23.96-2.89-16.99-39.53-40.94-52.11-56.16-41.74-50.48-8.83-116.69,58.16-94.78,12.86,4.21,29.38,20.15,29.38,34.32v29.46Z"/>
+          <polygon class="cls-1" points="230.89 257.31 230.89 297.12 197.45 297.12 197.45 472.28 154.46 472.28 154.46 297.12 121.02 297.12 121.02 257.31 230.89 257.31"/>
+          <path class="cls-1" d="M286.63,257.31v166.4c0,10.96,27.07,10.96,27.07,0v-166.4h42.99v171.18c0,31.28-37.29,47.71-64.46,45.36-20.17-1.75-48.59-19.91-48.59-42.17v-174.36h42.99Z"/>
+          <path class="cls-1" d="M375.8,472.28v-214.97h69.27c17.91,0,37.07,22.85,42.63,38.58,8.94,25.29,9.18,108.46,1.18,134.21-5.7,18.36-24.47,42.17-45.41,42.17h-67.68ZM418.79,432.47c14.53,1.52,24.13-2.21,29.11-16.28,4.91-13.86,4.09-71.02,2.81-88.09-1.52-20.24-9.42-33.9-31.92-30.98v135.35Z"/>
+          <rect class="cls-1" x="512.74" y="257.31" width="42.99" height="214.97"/>
+          <!-- TOGGLE TRACK -->
+          <path id="toggle-track" class="cls-2" d="M681.56,257.01c-4.3,0-8.68.23-13.12.73-81.94,9.24-124.01,103.89-75.14,171.39,21.79,30.1,55.09,44.63,88.26,44.55h220.06c59.83,0,108.34-48.5,108.34-108.34h0c0-59.83-48.5-108.34-108.34-108.34h-220.06Z"/>
+          <!-- THUMB -->
+          <circle id="logo-thumb" cx="681" cy="365.34" r="67" fill="var(--noir)"/>
+          <!-- LUNE -->
+          <g id="logo-moon" class="active">
+            <circle cx="681" cy="365" r="38" fill="#BBBFFF"/>
+            <circle cx="699" cy="352" r="30" fill="var(--noir)"/>
+            <circle cx="726" cy="308" r="5" fill="#BBBFFF" opacity="0.75"/>
+            <circle cx="745" cy="327" r="3.5" fill="#BBBFFF" opacity="0.55"/>
+            <circle cx="716" cy="297" r="3" fill="#BBBFFF" opacity="0.6"/>
+          </g>
+          <!-- SOLEIL -->
+          <g id="logo-sun" opacity="0">
+            <circle cx="901" cy="365.34" r="28" fill="#1a1a2e"/>
+            <line x1="901" y1="318" x2="901" y2="305" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="901" y1="412" x2="901" y2="425" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="854" y1="365.34" x2="841" y2="365.34" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="948" y1="365.34" x2="961" y2="365.34" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="867" y1="332" x2="858" y2="323" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="935" y1="399" x2="944" y2="408" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="935" y1="332" x2="944" y2="323" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="867" y1="399" x2="858" y2="408" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <button id="theme-toggle-btn" aria-label="Basculer mode clair/sombre" style="position:absolute;right:0px;top:18px;bottom:0px;width:31px;height:17px;background:none;border:none;padding:0;cursor:pointer;"></button>
+      </a>
+      <div class="nav-links">
+        <a href="./index.html">Accueil</a>
+       <a href="./portfolio.html">Projets</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="./decouverte.html" class="btn-nav btn-nav-call"><span>Réserver un appel</span>
+          <svg class="btn-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <svg class="menu-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="menu-path" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
+          <path d="M7 16 27 16"/>
+        </svg>
+      </button>
+
+      <div class="menu-dropdown">
+        <nav class="mobile-nav-links">
+          <a href="./index.html"  class="mobile-link"><span class="mobile-link-num">01</span>Accueil</a>
+          <a href="./portfolio.html" class="mobile-link"><span class="mobile-link-num">02</span>Projets</a>
+          <a href="#services" class="mobile-link"><span class="mobile-link-num">03</span>Services</a>
+          <a href="#about"   class="mobile-link"><span class="mobile-link-num">04</span>À propos</a>
+          <a href="#faq"       class="mobile-link"><span class="mobile-link-num">05</span>FAQ</a>
+        </nav>
+
+        <div class="mobile-menu-bottom">
+          <a href="./decouverte.html" class="mobile-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
+            Réserver un appel
+          </a>
+          <div class="mobile-menu-footer">
+            <span class="mobile-footer-copy">© 2026 Morgan Studio</span>
+            <div class="mobile-socials">
+              <a href="https://www.instagram.com/morganstudio_0ff/" class="mobile-social" aria-label="Instagram" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/morgan-studio-0ff" class="mobile-social" aria-label="LinkedIn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero-text">
+    <div class="hero-text-inner">
+      <span class="hero-badge">Design Graphique · Print & Digitl</span>
+      <h1 class="hero-title">
+        <span class="hero-line-1">Un design</span>
+        <span class="hero-rotating-wrap"></span>
+      </h1>
+      <p class="hero-desc">
+       Je transforme vos idées en visuels clair et impactants.
+<br>Tout est pensé pour refléter votre univers.
+<br>Un travail authentique et sur-mesure.
+      </p>
+      <div class="hero-cta">        
+        <a href="./portfolio.html" class="btn btn-primary">Voir mes projets <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" width="13" height="13"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="./decouverte.html" class="btn btn-outline">On s'appelle ?</a>
+        
+      </div>
+      <div class="hero-scroll">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MARQUEE ══ -->
+  <div id="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="dot"></span>Identité visuelle</div>
+      <div class="marquee-item"><span class="dot"></span>Print</div>
+      <div class="marquee-item"><span class="dot"></span>Packaging</div>
+      <div class="marquee-item"><span class="dot"></span>Réseaux Sociaux</div>
+      <div class="marquee-item"><span class="dot"></span>Illustration</div>
+      <div class="marquee-item"><span class="dot"></span>Direction artistique</div>
+      <div class="marquee-item"><span class="dot"></span>Typographie</div>
+      <div class="marquee-item"><span class="dot"></span>Signalétique</div>
+      <div class="marquee-item"><span class="dot"></span>Identité visuelle</div>
+      <div class="marquee-item"><span class="dot"></span>Print</div>
+      <div class="marquee-item"><span class="dot"></span>Packaging</div>
+      <div class="marquee-item"><span class="dot"></span>Réseaux Sociaux</div>
+      <div class="marquee-item"><span class="dot"></span>Illustration</div>
+      <div class="marquee-item"><span class="dot"></span>Direction artistique</div>
+      <div class="marquee-item"><span class="dot"></span>Typographie</div>
+      <div class="marquee-item"><span class="dot"></span>Signalétique</div>
+    </div>
+  </div>
+
+  <!-- ══ CAROUSEL HORIZONTAL ══ -->
+  <section id="horizontal-carousel">
+    <div class="hc-section" id="hc-section">
+      <div class="hc-sticky">
+
+        <!-- Label scroll -->
+        <div class="hc-scroll-hint" id="hc-scroll-hint">
+          <span>Scroll</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+
+        <div class="hc-track" id="hc-track">
+
+          <!-- Carte 01 — Identité visuelle -->
+          <div class="hc-card">
+            <img class="hc-card-img" src="./img/01_branding/aprl_logo.webp" alt="Branding" />
+            <span class="hc-card-tag">Identité visuelle</span>
+          </div>
+
+          <!-- Carte 02 — Print -->
+          <div class="hc-card">
+            <img class="hc-card-img" src="./img/02_print/affiche_ad.webp" alt="Print" />
+            <span class="hc-card-tag">Print</span>
+          </div>
+
+          <!-- Carte 03 — Digital -->
+          <div class="hc-card">
+            <img class="hc-card-img" src="./img/03_digital/red_blue.webp" alt="Digital" />
+            <span class="hc-card-tag">Social Media</span>
+          </div>
+
+          <!-- Carte 04 — Illustration -->
+          <div class="hc-card">
+            <img class="hc-card-img" src="./img/04_illustration/couverture_mockup.webp" alt="Illustration" />
+            <span class="hc-card-tag">Illustration</span>
+          </div>
+
+          <!-- Carte 05 — Portfolio intro -->
+          <div class="hc-card hc-card--portfolio-intro">
+            <div class="hc-portfolio-intro-inner">
+              <span class="section-label">Projets sélectionnés</span>
+              <h2 class="portfolio-title">Mes<br><span>créations.</span></h2>
+              <p class="portfolio-desc">Identités, print, digital, illustrations.<br>Un aperçu de ce que j'ai imaginé et réalisé, avec soin.</p>
+              <a href="./portfolio.html" class="btn btn-outline">Tout voir <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" width="13" height="13"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Barre de progression -->
+        <div class="hc-progress"><div class="hc-progress-fill" id="hc-progress-fill"></div></div>
+        <!-- Compteur -->
+        <div class="hc-counter" id="hc-counter">01 / 04</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ À PROPOS ══ -->
+<section id="about">
+  <div class="about-inner">
+    <span class="section-label">À propos</span>
+
+    <!-- Typo pleine largeur -->
+    <div class="about-headline">
+
+      <div class="about-line">
+        <span class="about-word">Salut, moi c'est</span>
+        <div class="about-photo-pill">
+          <img src="./img/00_site_content/portrait2.webp" alt="Morgan" />
+        </div>
+        <span class="about-word about-word-accent">Morgan.</span>
+      </div>
+
+      <div class="about-line about-line-2">
+        <span class="about-word">Designer</span>
+        <div class="about-tag-pill">Freelance</div>
+        <span class="about-word">graphique</span>
+      </div>
+
+      <div class="about-line about-line-3">
+        <span class="about-word about-word-accent">basé en&nbsp;</span><span class="about-word about-word-stroke">France.</span>
+      </div>
+
+    </div>
+
+    <!-- Texte + valeurs en dessous -->
+    <div class="about-body">
+
+      <!-- Colonne gauche : texte + CTA -->
+      <div class="about-body-left">
+        <p class="about-desc">
+          Je suis designer graphique freelance, et je n'ai pas fini d'apprendre
+          <br>— c'est d'ailleurs ce qui me plaît.
+          <br><br>Chaque projet est différent :
+          <br>un style, un format, un univers à construire de zéro.
+          <br><br>Ce qui ne change pas, c'est la façon dont je travaille :
+          <br>avec soin, sans lâcher tant que cela ne vous convient pas à 100%
+        </p>
+        <a href="#discovery-cta" class="btn btn-primary">
+          Discutons-en
+          <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" width="13" height="13"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- Colonne droite : 3 valeurs -->
+      <div class="about-values">
+        <div class="about-value">
+          <span class="about-value-num">01</span>
+          <div class="about-value-text">
+            <strong>Perfectionniste</strong>
+            <span>Je m'applique sur chaque détail, du début à la fin.</span>
+          </div>
+        </div>
+        <div class="about-value">
+          <span class="about-value-num">02</span>
+          <div class="about-value-text">
+            <strong>À l'écoute</strong>
+            <span>Je prends le temps de vous écouter avant de créer.</span>
+          </div>
+        </div>
+        <div class="about-value">
+          <span class="about-value-num">03</span>
+          <div class="about-value-text">
+            <strong>Impliqué</strong>
+            <span>Petit ou grand projet, je m'y donne à fond.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+(function() {
+  var section = document.getElementById('about');
+  if (!section) return;
+  var els = section.querySelectorAll(
+    '.about-word, .about-photo-pill, .about-tag-pill, .about-desc, .about-cta, .about-value'
+  );
+  var io = new IntersectionObserver(function(entries) {
+    if (!entries[0].isIntersecting) return;
+    els.forEach(function(el, i) {
+      setTimeout(function() { el.classList.add('visible'); }, i * 80);
+    });
+    io.disconnect();
+  }, { threshold: 0.1 });
+  io.observe(section);
+})();
+</script>
+
+  <!-- ══ SERVICES ══ -->
+  <section id="services">
+    <div class="services-inner">
+      <div class="services-header">
+        <span class="section-label">Ce que je fais</span>
+        <h2 class="services-title reveal">Des créations<br><span>sur mesure.</span></h2>
+      </div>
+      <div class="services-grid">
+
+        <a href="./decouverte.html" class="service-card reveal">
+          <span class="service-card-num">01</span>
+          <div class="service-card-content">
+            <h3 class="service-card-name">Identité visuelle</h3>
+            <p class="service-card-desc">Logo, charte, supports — tout ce qu'il faut pour avoir une image cohérente, construite de zéro.</p>
+          </div>
+          <span class="service-card-cta">On en parle ?
+            <svg viewBox="0 0 20 20" fill="none" width="11" height="11"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <a href="./decouverte.html" class="service-card reveal">
+          <span class="service-card-num">02</span>
+          <div class="service-card-content">
+            <h3 class="service-card-name">Print</h3>
+            <p class="service-card-desc">Affiches, flyers, cartes — des visuels faits<br>pour exister en vrai, pas juste sur un écran.</p>
+          </div>
+          <span class="service-card-cta">On en parle ?
+            <svg viewBox="0 0 20 20" fill="none" width="11" height="11"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <a href="./decouverte.html" class="service-card reveal">
+          <span class="service-card-num">03</span>
+          <div class="service-card-content">
+            <h3 class="service-card-name">Digital</h3>
+            <p class="service-card-desc">Posts, visuels, templates — pensés pour votre univers et votre audience.</p>
+          </div>
+          <span class="service-card-cta">On en parle ?
+            <svg viewBox="0 0 20 20" fill="none" width="11" height="11"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <a href="./decouverte.html" class="service-card reveal">
+          <span class="service-card-num">04</span>
+          <div class="service-card-content">
+            <h3 class="service-card-name">Illustration</h3>
+            <p class="service-card-desc">Un visuel unique, dessiné à la main ou en digital, selon ce que vous avez en tête.</p>
+          </div>
+          <span class="service-card-cta">On en parle ?
+            <svg viewBox="0 0 20 20" fill="none" width="11" height="11"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROCESSUS — timeline verticale alternée ══ -->
+  <section id="process">
+    <div class="process-inner">
+      <div class="process-header">
+        <span class="section-label">Comment ça se passe</span>
+        <h2 class="process-title reveal">De l'idée floue<br><span>aux fichiers propres.</span></h2>
+        <p class="process-desc reveal">Pas de surprise en cours de route — vous savez exactement où on en est, à chaque étape.</p>
+      </div>
+
+      <div class="ptl-wrap">
+
+        <!-- Ligne centrale avec remplissage -->
+        <div class="ptl-axis">
+          <div class="ptl-axis-fill" id="ptl-axis-fill"></div>
+        </div>
+
+        <!-- Étape 01 — gauche -->
+        <div class="ptl-row ptl-row--left" data-ptl="0">
+          <div class="ptl-card">
+            <span class="ptl-tag">Étape 01</span>
+            <h3 class="ptl-title">L'appel découverte</h3>
+            <p class="ptl-desc">On se parle 30 minutes. Votre projet, vos envies, ce qui compte pour vous. Pas de pitch — juste un vrai échange et le devis arrive dans les 48h..</p>
+            <div class="ptl-deliverable">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Devis détaillé + planning
+            </div>
+          </div>
+          <div class="ptl-node" data-ptl-node="0">
+            <span class="ptl-num">01</span>
+            <div class="ptl-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91A16 16 0 0 0 14 14.91l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 15.92z"/></svg>
+            </div>
+          </div>
+          <div class="ptl-spacer"></div>
+        </div>
+
+        <!-- Étape 02 — droite -->
+        <div class="ptl-row ptl-row--right" data-ptl="1">
+          <div class="ptl-spacer"></div>
+          <div class="ptl-node" data-ptl-node="1">
+            <span class="ptl-num">02</span>
+            <div class="ptl-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+          </div>
+          <div class="ptl-card">
+            <span class="ptl-tag">Étape 02</span>
+            <h3 class="ptl-title">Recherche & moodboard</h3>
+            <p class="ptl-desc">Je me plonge dans votre univers — ce qui existe, ce qui vous ressemble, ce qui vous distingue. Je reviens avec 3 pistes. Vous choisissez. On avance seulement quand c'est validé.</p>
+            <div class="ptl-deliverable">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Moodboard + direction validée
+            </div>
+          </div>
+        </div>
+
+        <!-- Étape 03 — gauche -->
+        <div class="ptl-row ptl-row--left" data-ptl="2">
+          <div class="ptl-card">
+            <span class="ptl-tag">Étape 03</span>
+            <h3 class="ptl-title">Création & retouches</h3>
+            <p class="ptl-desc">Les premiers visuels arrivent. Vous réagissez, on ajuste ensemble avec 3 allers-retours inclus. <br>Mon objectif :  un projet qui vous correspond à 100%.</p>
+            <div class="ptl-deliverable">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Visuels validés
+            </div>
+          </div>
+          <div class="ptl-node" data-ptl-node="2">
+            <span class="ptl-num">03</span>
+            <div class="ptl-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+          </div>
+          <div class="ptl-spacer"></div>
+        </div>
+
+        <!-- Étape 04 — droite -->
+        <div class="ptl-row ptl-row--right" data-ptl="3">
+          <div class="ptl-spacer"></div>
+          <div class="ptl-node" data-ptl-node="3">
+            <span class="ptl-num">04</span>
+            <div class="ptl-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </div>
+         <div class="ptl-card ptl-card--last">
+  <span class="ptl-tag">Étape 04</span>
+  <h3 class="ptl-title">Livraison des fichiers</h3>
+  <p class="ptl-desc">PDF, PNG, SVG, JPG — bien rangés, bien nommés, prêts à l'emploi. Solde réglé, fichiers livrés.<br>Tout vous appartient.</p>
+  <div class="ptl-deliverable ptl-deliverable--done">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    Fichiers export haute qualité
+  </div>
+          </div>
+        </div>
+
+      </div><!-- /.ptl-wrap -->
+    </div><!-- /.process-inner -->
+  </section>
+
+  <script>
+  (function () {
+    var wrap     = document.querySelector('.ptl-wrap');
+    var axisFill = document.getElementById('ptl-axis-fill');
+    var rows     = document.querySelectorAll('.ptl-row');
+    var nodes    = document.querySelectorAll('[data-ptl-node]');
+    if (!wrap || !axisFill || !rows.length) return;
+
+    function getVH() {
+      return window.visualViewport ? window.visualViewport.height : window.innerHeight;
+    }
+
+    /* Pour chaque étape : la ligne se remplit jusqu'au nœud correspondant */
+    function update() {
+      var wrapTop    = wrap.getBoundingClientRect().top;
+      var wrapH      = wrap.offsetHeight;
+      var viewH      = getVH();
+
+      /* Pourcentage de remplissage global (0 → 1) */
+      /* On veut que la ligne commence à mi-écran quand le wrap entre,
+         et finisse quand le dernier nœud passe le centre */
+      var scrolled = (viewH * 0.55 - wrapTop) / wrapH;
+      scrolled = Math.min(Math.max(scrolled, 0), 1);
+
+      axisFill.style.height = (scrolled * 100) + '%';
+
+      /* Active chaque nœud + row quand le scroll les atteint */
+      rows.forEach(function (row) {
+        var rect      = row.getBoundingClientRect();
+        var rowCenter = rect.top + rect.height * 0.45;
+        var active    = rowCenter < viewH * 0.65;
+        row.classList.toggle('ptl-row--active', active);
+      });
+
+      nodes.forEach(function (node) {
+        var rect      = node.getBoundingClientRect();
+        var nodeCenter = rect.top + rect.height * 0.5;
+        node.classList.toggle('ptl-node--active', nodeCenter < viewH * 0.65);
+      });
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+  </script>
+
+  <!-- ══ ACCROCHE INTERMÉDIAIRE ══ -->
+  <section id="teaser-cta">
+    <div class="teaser-inner reveal">
+      <p class="teaser-label">La suite ?</p>
+      <h2 class="teaser-title">Parlez-moi <br>de <span>votre projet</span>&nbsp;?</h2>
+    </div>
+  </section>
+
+  <!-- ══ APPEL DÉCOUVERTE + CONTACT ══ -->
+  <section id="discovery-cta">
+    <div class="discovery-cta-inner">
+
+      <div class="discovery-cta-content reveal">
+        <span class="section-label">Appel découverte</span>
+        <h2 class="discovery-cta-title">30 minutes.<br><span>On s'appelle ?</span></h2>
+        <p class="discovery-cta-desc">Vous me parlez de votre projet, je vous dis ce que j'en pense. Si le feeling est là, on construit quelque chose ensemble.</p>
+        <div class="discovery-cta-pills">
+          <span class="pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            30 minutes
+          </span>
+          <span class="pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Gratuit & sans engagement
+          </span>
+        </div>
+        <a href="decouverte.html" class="btn btn-outline">Je réserve mon appel <svg class="arrow-icon" viewBox="0 0 20 20" fill="none" width="13" height="13"><path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M11 4L17 10L11 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+        <!-- Contact fusionné — FIX : email en clair, protégé via JS anti-scraping -->
+        <div class="contact-inline">
+          <a href="#" class="contact-email email-obf" data-u="contact" data-d="morganstudio.fr">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="email-text"></span>
+          </a>
+          <div class="contact-social">
+            <a href="https://www.instagram.com/morganstudio_0ff/" class="contact-social-btn" aria-label="Instagram" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              Instagram
+            </a>
+            <a href="https://www.behance.net/morgandhenry1" class="contact-social-btn" aria-label="Behance" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 1.2.836 1.884 2.102 1.884.76 0 1.33-.306 1.553-.785h2.1zM15.98 14H19.8c-.09-1.315-.671-1.972-1.854-1.972-1.23 0-1.836.68-1.966 1.972zM3 21V3h6.848c4.422 0 5.799 2.17 5.799 4.44 0 1.517-.692 2.93-2.119 3.647 1.88.574 2.972 2.114 2.972 4.084C16.5 18.48 14.763 21 10.702 21H3zm3-10.748h3.44c1.524 0 2.318-.677 2.318-1.98 0-1.316-.8-1.95-2.274-1.95H6v3.93zm0 6.926h3.968c1.803 0 2.73-.87 2.73-2.293 0-1.478-.967-2.292-2.73-2.292H6v4.585z"/></svg>
+              Behance
+            </a>
+            <a href="https://www.linkedin.com/company/morgan-studio-0ff" class="contact-social-btn" aria-label="LinkedIn" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="discovery-cta-visual reveal">
+        <div class="discovery-cta-card">
+          <div class="dcta-card-header">
+            <span class="dcta-dot"></span>
+            <span class="dcta-dot"></span>
+            <span class="dcta-dot"></span>
+          </div>
+          <div class="dcta-steps">
+            <div class="dcta-step done">
+              <div class="dcta-step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="dcta-step-text">
+                <span>Questionnaire rempli</span>
+                <span class="dcta-step-sub">Vous posez les bases.<br> Votre projet, en quelques mots</span>
+              </div>
+            </div>
+            <div class="dcta-step active">
+              <div class="dcta-step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+              </div>
+              <div class="dcta-step-text">
+                <span>Je vous réponds</span>
+                <span class="dcta-step-sub">Sous 24h avec un créneau.</span>
+              </div>
+            </div>
+            <div class="dcta-step">
+              <div class="dcta-step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="dcta-step-text">
+                <span>On se parle 30 min</span>
+                <span class="dcta-step-sub">Détendu, sans prise de tête.</span>
+              </div>
+            </div>
+            <div class="dcta-step">
+              <div class="dcta-step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div class="dcta-step-text">
+                <span>Devis personnalisé</span>
+                <span class="dcta-step-sub">Sous 48h, pensé pour vous</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ FAQ ══ -->
+  <section id="faq">
+    <div class="faq-inner">
+      <div class="faq-header">
+        <span class="section-label">Questions fréquentes</span>
+        <h2 class="faq-title reveal">Les questions<br>que <span>tout le monde pose.</span></h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-num">01</span>
+            <span class="faq-q-text">Vous travaillez à distance ?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, 100% à distance — peu importe où vous êtes en France.<br> Email, visio, téléphone : on choisit ce qui vous convient le mieux.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-num">02</span>
+            <span class="faq-q-text">Et si j'aime pas la première version ?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>Pas de panique — 3 allers-retours sont inclus. On ajuste jusqu'à ce que ce soit juste. <br>Au-delà, on en parle avant, pas après.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-num">03</span>
+            <span class="faq-q-text">Quels sont les délais ?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>Un logo, c'est 1 à 2 semaines. Une identité complète, 3 à 5 semaines. <br>On fixe un planning dès le départ — et je m'y tiens.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-num">04</span>
+            <span class="faq-q-text">Comment ça se passe pour payer ?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>30% d'acompte pour démarrer, le reste à la livraison. Virement ou PayPal — comme vous le souhaitez.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span class="faq-num">05</span>
+            <span class="faq-q-text">Et si le résultat me plaît pas du tout ?</span>
+            <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <p>L'acompte couvre le travail déjà fait — il n'est pas remboursable. C'est justement pour ça que l'appel découverte existe : on s'assure qu'on se comprend avant de démarrer. <br>Ça évite les déceptions des deux côtés.</p>
+          </div>
+        </div>
+
+<div class="faq-item reveal">
+  <button class="faq-question" aria-expanded="false">
+    <span class="faq-num">06</span>
+    <span class="faq-q-text">Pourquoi pas de tarifs affichés ?</span>
+    <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+  </button>
+  <div class="faq-answer">
+    <p>Parce que chaque projet est unique. Le tarif dépend de la prestation, du temps estimé, de la complexité et de vos besoins — une grille fixe ne rendrait service à personne. Je préfère un devis pensé pour vous, après avoir compris votre projet. <br>L'appel découverte est gratuit et sans engagement : c'est le meilleur point de départ.</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══ -->
+    <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1009.96 474.52" aria-label="Morgan Studio" role="img">
+          <path class="cls-1" d="M60.51.94c3.23,34.98,12.38,69.4,15.92,104.31,2.8,27.69,2.19,55.87,4.01,83.6,3.69,1.06,2.29-3.42,2.37-5.57,1.14-29.17,1.59-58.41,4.98-87.39C91.39,65.04,101.81.94,101.81.94h62.2v214.97h-42.99c-1.96-62.93,4.66-125.48,11.14-187.89-4.09-1.34-4.2,4.73-4.58,7.33-3.28,22.57-4.92,45.46-8.42,68.03-5.85,37.7-13.85,74.98-20.45,112.51l-33.53-.68c-9.82-41.35-17.23-83.91-23.51-126.17-2.74-18.43-3.89-37.15-6.57-55.53-.4-2.72-.3-5.48-4.03-5.53l10.32,113.89,1.61,74.03H0V.94h60.51Z"/>
+          <path class="cls-1" d="M275.12,1.38c86.42-9.74,150.57,79.45,109.94,157.71-36.92,71.12-138,78.72-185.08,13.68C151.11,105.26,193.14,10.62,275.12,1.38ZM279.87,42.75c-85.21,10.88-70.93,139.75,13.9,133.32,87.15-6.6,75.78-144.77-13.9-133.32Z"/>
+          <path class="cls-1" d="M486.47.94c37.47,5.04,53.11,54.72,35.58,84.94-2.35,4.05-4.88,7.01-7.66,9.29-8.22,6.76-17.84,8.63-21.6,9.25-.99.16-1.82.27-2.37.33,0,.96.01,1.92.02,2.87,10.04.32,20.3,6.86,24.2,16.43l23.58,91.86h-42.99l-23.96-90.69-14.26-.07v90.76h-42.99V.94c22.56,2.19,50.57-2.94,72.45,0ZM457.01,85.33c14.76.96,27.28-1.35,28.74-18.23,1.85-21.44-7.93-28.85-28.74-26.36v44.59Z"/>
+          <path class="cls-1" d="M735.67,80.56h-42.99c-5.68-26.67-32.31-40.13-58.1-38.18-74.68,5.64-75.28,128.01,0,133.69,25.53,1.93,53.76-12.03,59.69-38.18h-54.14v-36.62h100.32v35.83c0,35.21-43.78,69.95-75.42,77.45-100,23.68-162.59-85.74-112.16-167.89,45.2-73.63,172.71-56.22,182.81,33.92Z"/>
+          <path class="cls-1" d="M740.45,215.91L774.79.87l61.18.08,33.45,214.95h-42.99l-6.54-49.19h-29.92l-6.54,49.19h-42.99ZM807.32,35.96h-4.76l-7.96,90.76h20.69l-7.96-90.76Z"/>
+          <path class="cls-1" d="M933.87.94s23.2,89.7,32.2,133.45c3.31,16.08,5.05,33.17,8.44,48.88.56,2.59,0,5.54,3.97,5.58-10.25-62.16-17.99-124.56-15.11-187.91h42.99v214.97h-47.77c-18.99-61.78-35.69-124.16-46.99-187.91-4.11-.6-2.11,2.82-1.92,5.12,2.65,31.84,11.91,65.28,13.86,97.62l1.61,85.18h-42.99V.94h51.7Z"/>
+          <path class="cls-1" d="M108.28,324.19h-39.81c-.09-9.96,2.99-30.32-11.94-30.34-9.83-.01-12.32,11.02-10.97,18.89,4.37,25.56,58.74,51.63,68.33,86.26,6.37,23.03.72,55.04-22.03,67.2C54.84,485.96,0,470.22,0,422.12v-24.68h41.4v27.87c0,1.73,5.22,8.81,7.5,10.01,16.96,8.94,26.64-8.19,23.95-23.96-2.89-16.99-39.53-40.94-52.11-56.16-41.74-50.48-8.83-116.69,58.16-94.78,12.86,4.21,29.38,20.15,29.38,34.32v29.46Z"/>
+          <polygon class="cls-1" points="230.89 257.31 230.89 297.12 197.45 297.12 197.45 472.28 154.46 472.28 154.46 297.12 121.02 297.12 121.02 257.31 230.89 257.31"/>
+          <path class="cls-1" d="M286.63,257.31v166.4c0,10.96,27.07,10.96,27.07,0v-166.4h42.99v171.18c0,31.28-37.29,47.71-64.46,45.36-20.17-1.75-48.59-19.91-48.59-42.17v-174.36h42.99Z"/>
+          <path class="cls-1" d="M375.8,472.28v-214.97h69.27c17.91,0,37.07,22.85,42.63,38.58,8.94,25.29,9.18,108.46,1.18,134.21-5.7,18.36-24.47,42.17-45.41,42.17h-67.68ZM418.79,432.47c14.53,1.52,24.13-2.21,29.11-16.28,4.91-13.86,4.09-71.02,2.81-88.09-1.52-20.24-9.42-33.9-31.92-30.98v135.35Z"/>
+          <rect class="cls-1" x="512.74" y="257.31" width="42.99" height="214.97"/>
+          <path id="toggle-track-footer" class="cls-2" d="M681.56,257.01c-4.3,0-8.68.23-13.12.73-81.94,9.24-124.01,103.89-75.14,171.39,21.79,30.1,55.09,44.63,88.26,44.55h220.06c59.83,0,108.34-48.5,108.34-108.34h0c0-59.83-48.5-108.34-108.34-108.34h-220.06Z"/>
+          <circle id="logo-thumb-footer" cx="681" cy="365.34" r="67" fill="var(--noir)"/>
+        </svg>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/morganstudio_0ff/" aria-label="Instagram" class="social-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/morgan-studio-0ff" aria-label="LinkedIn" class="social-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <span>© 2026 Morgan Studio</span>
+          <span>Tous droits réservés</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="./index.html">Accueil</a>
+          <a href="./portfolio.html">Projets</a>
+          <a href="#services">Services</a>
+          <a href="#about">À propos</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Politique de confidentialité</a>
+          <a href="cgv.html">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/animated-text.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /* FIX : Email anti-scraping — remplace le lien Cloudflare cassé */
+    document.querySelectorAll('.email-obf').forEach(function(el) {
+      var addr = el.dataset.u + '@' + el.dataset.d;
+      // Afficher l'email en clair dès le chargement
+      var span = el.querySelector('.email-text');
+      if (span) span.textContent = addr;
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'mailto:' + addr;
+      });
+    });
+  </script>
+  <script src="js/carousel.js"></script>
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/scrollbar.js"></script>
+  <script src="js/offre-lancement.js"></script>
+  
+
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Morgan Studio — Appel découverte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Rethink+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/discovery.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="icon" type="image/png" href="./img/00_site_content/FAVICON_V2.ico" />
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      // ══ VOTRE PUBLIC KEY EMAILJS ══
+      // Remplacez par votre clé depuis emailjs.com → Account → API Keys
+      emailjs.init('i_JVVbfnODmnrHJB9');
+    })();
+  </script>
+</head>
+<body>
+<script src="js/loader.js"></script>
+
+  <!-- Curseur custom -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ══ HEADER ══ -->
+  <header id="header">
+    <nav id="navbar">
+      <a href="index.html" aria-label="Retour accueil" class="nav-logo" style="display:inline-flex;align-items:center;line-height:0;position:relative;">
+        <svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1009.96 474.52" height="35" style="display:block;overflow:visible;" aria-hidden="true">
+          <defs><style>
+            #logo-svg .cls-1{transition:fill .35s ease;}
+            #logo-svg .cls-2{transition:fill .35s ease,opacity .35s ease;}
+            #logo-thumb{transition:cx .44s cubic-bezier(.34,1.56,.64,1),fill .35s ease;}
+            #logo-moon,#logo-sun{transition:opacity .35s ease;}
+            @keyframes logoPulse{0%,100%{opacity:.45}50%{opacity:0}}
+            #logo-moon.active,#logo-sun.active{animation:logoPulse 2.5s ease-in-out infinite;}
+          </style></defs>
+          <!-- MORGAN -->
+          <path class="cls-1" d="M60.51.94c3.23,34.98,12.38,69.4,15.92,104.31,2.8,27.69,2.19,55.87,4.01,83.6,3.69,1.06,2.29-3.42,2.37-5.57,1.14-29.17,1.59-58.41,4.98-87.39C91.39,65.04,101.81.94,101.81.94h62.2v214.97h-42.99c-1.96-62.93,4.66-125.48,11.14-187.89-4.09-1.34-4.2,4.73-4.58,7.33-3.28,22.57-4.92,45.46-8.42,68.03-5.85,37.7-13.85,74.98-20.45,112.51l-33.53-.68c-9.82-41.35-17.23-83.91-23.51-126.17-2.74-18.43-3.89-37.15-6.57-55.53-.4-2.72-.3-5.48-4.03-5.53l10.32,113.89,1.61,74.03H0V.94h60.51Z"/>
+          <path class="cls-1" d="M275.12,1.38c86.42-9.74,150.57,79.45,109.94,157.71-36.92,71.12-138,78.72-185.08,13.68C151.11,105.26,193.14,10.62,275.12,1.38ZM279.87,42.75c-85.21,10.88-70.93,139.75,13.9,133.32,87.15-6.6,75.78-144.77-13.9-133.32Z"/>
+          <path class="cls-1" d="M486.47.94c37.47,5.04,53.11,54.72,35.58,84.94-2.35,4.05-4.88,7.01-7.66,9.29-8.22,6.76-17.84,8.63-21.6,9.25-.99.16-1.82.27-2.37.33,0,.96.01,1.92.02,2.87,10.04.32,20.3,6.86,24.2,16.43l23.58,91.86h-42.99l-23.96-90.69-14.26-.07v90.76h-42.99V.94c22.56,2.19,50.57-2.94,72.45,0ZM457.01,85.33c14.76.96,27.28-1.35,28.74-18.23,1.85-21.44-7.93-28.85-28.74-26.36v44.59Z"/>
+          <path class="cls-1" d="M735.67,80.56h-42.99c-5.68-26.67-32.31-40.13-58.1-38.18-74.68,5.64-75.28,128.01,0,133.69,25.53,1.93,53.76-12.03,59.69-38.18h-54.14v-36.62h100.32v35.83c0,35.21-43.78,69.95-75.42,77.45-100,23.68-162.59-85.74-112.16-167.89,45.2-73.63,172.71-56.22,182.81,33.92Z"/>
+          <path class="cls-1" d="M740.45,215.91L774.79.87l61.18.08,33.45,214.95h-42.99l-6.54-49.19h-29.92l-6.54,49.19h-42.99ZM807.32,35.96h-4.76l-7.96,90.76h20.69l-7.96-90.76Z"/>
+          <path class="cls-1" d="M933.87.94s23.2,89.7,32.2,133.45c3.31,16.08,5.05,33.17,8.44,48.88.56,2.59,0,5.54,3.97,5.58-10.25-62.16-17.99-124.56-15.11-187.91h42.99v214.97h-47.77c-18.99-61.78-35.69-124.16-46.99-187.91-4.11-.6-2.11,2.82-1.92,5.12,2.65,31.84,11.91,65.28,13.86,97.62l1.61,85.18h-42.99V.94h51.7Z"/>
+          <!-- STUDIO -->
+          <path class="cls-1" d="M108.28,324.19h-39.81c-.09-9.96,2.99-30.32-11.94-30.34-9.83-.01-12.32,11.02-10.97,18.89,4.37,25.56,58.74,51.63,68.33,86.26,6.37,23.03.72,55.04-22.03,67.2C54.84,485.96,0,470.22,0,422.12v-24.68h41.4v27.87c0,1.73,5.22,8.81,7.5,10.01,16.96,8.94,26.64-8.19,23.95-23.96-2.89-16.99-39.53-40.94-52.11-56.16-41.74-50.48-8.83-116.69,58.16-94.78,12.86,4.21,29.38,20.15,29.38,34.32v29.46Z"/>
+          <polygon class="cls-1" points="230.89 257.31 230.89 297.12 197.45 297.12 197.45 472.28 154.46 472.28 154.46 297.12 121.02 297.12 121.02 257.31 230.89 257.31"/>
+          <path class="cls-1" d="M286.63,257.31v166.4c0,10.96,27.07,10.96,27.07,0v-166.4h42.99v171.18c0,31.28-37.29,47.71-64.46,45.36-20.17-1.75-48.59-19.91-48.59-42.17v-174.36h42.99Z"/>
+          <path class="cls-1" d="M375.8,472.28v-214.97h69.27c17.91,0,37.07,22.85,42.63,38.58,8.94,25.29,9.18,108.46,1.18,134.21-5.7,18.36-24.47,42.17-45.41,42.17h-67.68ZM418.79,432.47c14.53,1.52,24.13-2.21,29.11-16.28,4.91-13.86,4.09-71.02,2.81-88.09-1.52-20.24-9.42-33.9-31.92-30.98v135.35Z"/>
+          <rect class="cls-1" x="512.74" y="257.31" width="42.99" height="214.97"/>
+          <!-- TOGGLE TRACK -->
+          <path id="toggle-track" class="cls-2" d="M681.56,257.01c-4.3,0-8.68.23-13.12.73-81.94,9.24-124.01,103.89-75.14,171.39,21.79,30.1,55.09,44.63,88.26,44.55h220.06c59.83,0,108.34-48.5,108.34-108.34h0c0-59.83-48.5-108.34-108.34-108.34h-220.06Z"/>
+          <!-- THUMB -->
+          <circle id="logo-thumb" cx="681" cy="365.34" r="67" fill="var(--noir)"/>
+          <!-- LUNE -->
+          <g id="logo-moon" class="active">
+            <circle cx="681" cy="365" r="38" fill="#BBBFFF"/>
+            <circle cx="699" cy="352" r="30" fill="var(--noir)"/>
+            <circle cx="726" cy="308" r="5" fill="#BBBFFF" opacity="0.75"/>
+            <circle cx="745" cy="327" r="3.5" fill="#BBBFFF" opacity="0.55"/>
+            <circle cx="716" cy="297" r="3" fill="#BBBFFF" opacity="0.6"/>
+          </g>
+          <!-- SOLEIL -->
+          <g id="logo-sun" opacity="0">
+            <circle cx="901" cy="365.34" r="28" fill="#1a1a2e"/>
+            <line x1="901" y1="318" x2="901" y2="305" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="901" y1="412" x2="901" y2="425" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="854" y1="365.34" x2="841" y2="365.34" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="948" y1="365.34" x2="961" y2="365.34" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="867" y1="332" x2="858" y2="323" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="935" y1="399" x2="944" y2="408" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="935" y1="332" x2="944" y2="323" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="867" y1="399" x2="858" y2="408" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <button id="theme-toggle-btn" aria-label="Basculer mode clair/sombre" style="position:absolute;right:0px;top:18px;bottom:0px;width:31px;height:17px;background:none;border:none;padding:0;cursor:pointer;"></button>
+      </a>
+      <div class="nav-links">
+        <a href="./index.html">Accueil</a>
+       <a href="./portfolio.html">Projets</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="./decouverte.html" class="btn-nav btn-nav-call"><span>Réserver un appel</span>
+          <svg class="btn-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
+        </a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <svg class="menu-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path class="menu-path" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
+          <path d="M7 16 27 16"/>
+        </svg>
+      </button>
+
+      <div class="menu-dropdown">
+        <nav class="mobile-nav-links">
+          <a href="./index.html"  class="mobile-link"><span class="mobile-link-num">01</span>Accueil</a>
+          <a href="./portfolio.html" class="mobile-link"><span class="mobile-link-num">02</span>Projets</a>
+          <a href="./index.html#services" class="mobile-link"><span class="mobile-link-num">03</span>Services</a>
+          <a href="./index.html#about"   class="mobile-link"><span class="mobile-link-num">04</span>À propos</a>
+          <a href="./index.html#faq"       class="mobile-link"><span class="mobile-link-num">05</span>FAQ</a>
+        </nav>
+
+        <div class="mobile-menu-bottom">
+          <a href="./decouverte.html" class="mobile-cta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.46 16z"/></svg>
+            Réserver un appel
+          </a>
+          <div class="mobile-menu-footer">
+            <span class="mobile-footer-copy">© 2026 Morgan Studio</span>
+            <div class="mobile-socials">
+              <a href="https://www.instagram.com/morganstudio_0ff/" class="mobile-social" aria-label="Instagram" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/morgan-studio-0ff" class="mobile-social" aria-label="LinkedIn" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="discovery-hero">
+    <div class="discovery-hero-inner">
+      <div class="discovery-badge">Appel découverte</div>
+      <h1 class="discovery-title">
+        On se parle<br>
+        <span>sans prise de tête.</span>
+      </h1>
+      <p class="discovery-desc">
+        Avant de parler budget ou délai, je préfère vous connaître. Votre projet, votre vibe, ce qui vous tient à cœur.
+        Cet appel est gratuit, sans engagement — et généralement, ça suffit à lancer quelque chose de bien.
+      </p>
+      <div class="discovery-pills">
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          30 minutes
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          Visio ou téléphone
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          100% gratuit
+        </span>
+        <span class="pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Aucun engagement
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body deux colonnes -->
+  <div class="discovery-body">
+
+    <!-- Col info -->
+    <div class="discovery-info reveal">
+      <div class="discovery-what">
+        <div class="discovery-what-title">Ce dont on va parler</div>
+        <p>Un échange simple et sans prise de tête, pour voir si on a envie de construire quelque chose ensemble.</p>
+      </div>
+      <div class="discovery-steps">
+        <div class="discovery-step">
+          <div class="step-icon">01</div>
+          <div class="step-text">
+            <span class="step-label">Votre projet</span>
+            <span class="step-sub">Ce que vous imaginez, ce dont vous avez besoin, ce que vous voulez transmettre.</span>
+          </div>
+        </div>
+        <div class="discovery-step">
+          <div class="step-icon">02</div>
+          <div class="step-text">
+            <span class="step-label">Votre univers</span>
+            <span class="step-sub">Vos références, ce qui vous ressemble — et ce que vous ne voulez surtout pas.</span>
+          </div>
+        </div>
+        <div class="discovery-step">
+          <div class="step-icon">03</div>
+          <div class="step-text">
+            <span class="step-label">Budget & timing</span>
+            <span class="step-sub">On en parle calmement, sans pression. Juste pour que je puisse vous proposer quelque chose d'adapté.</span>
+          </div>
+        </div>
+        <div class="discovery-step">
+          <div class="step-icon">04</div>
+          <div class="step-text">
+            <span class="step-label">La suite</span>
+            <span class="step-sub">Si le feeling est là, vous recevez un devis sous 48h.</span>
+          </div>
+        </div>
+      </div>
+      <div class="discovery-free-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <p><strong>Aucune obligation.</strong> Si ça ne colle pas, on se le dit — c'est aussi simple que ça.</p>
+      </div>
+    </div>
+
+    <!-- Col formulaire -->
+    <div class="discovery-form-wrap reveal">
+      <div class="form-header">
+        <h2>Dites-moi l'essentiel</h2>
+        <p>2 minutes pour remplir ça — et j'arrive à notre appel vraiment préparé, sans vous faire répéter dix fois la même chose.</p>
+      </div>
+      <div class="form-progress">
+        <div class="form-progress-fill" id="progressFill" style="width: 25%"></div>
+      </div>
+      <div class="form-steps-nav" id="stepsNav">
+        <div class="form-step-tab active" data-step="1">Vous</div>
+        <div class="form-step-tab" data-step="2">Projet</div>
+        <div class="form-step-tab" data-step="3">Budget</div>
+        <div class="form-step-tab" data-step="4">Envoi</div>
+      </div>
+
+      <form id="discoveryForm" novalidate>
+
+        <!-- Étape 1 : Infos de base -->
+        <div class="form-step-block active" data-step="1">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Prénom & nom <span>*</span></label>
+              <input type="text" class="form-input" id="name" placeholder="Ex : Marie Dupont" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Téléphone <span>*</span></label>
+              <input type="tel" class="form-input" id="phone" placeholder="Ex : 06 12 34 56 78" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email <span>*</span></label>
+            <input type="email" class="form-input" id="email" placeholder="Ex : marie@email.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Votre activité / projet <span>*</span></label>
+            <input type="text" class="form-input" id="company" placeholder="Ex : photographe indépendant, café de quartier, nouvelle marque…" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Comment vous avez entendu parler de moi ?</label>
+            <select class="form-select" id="source">
+              <option value="">Sélectionnez…</option>
+              <option value="instagram">Instagram</option>
+              <option value="bouche">Bouche à oreille / recommandation</option>
+              <option value="behance">Behance</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="google">Recherche Google</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="form-nav">
+            <span></span>
+            <button type="button" class="form-nav-next" onclick="nextStep(2)">Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Étape 2 : Le projet -->
+        <div class="form-step-block" data-step="2">
+          <div class="form-group">
+            <label class="form-label">Type de projet <span>*</span></label>
+            <div class="chips-group" id="projectType">
+              <button type="button" class="chip" data-value="identite">Identité visuelle</button>
+              <button type="button" class="chip" data-value="Logo seul">Logo seul</button>
+              <button type="button" class="chip" data-value="Print (affiche, flyer, menu…)">Print (affiche, flyer, menu…)</button>
+              <button type="button" class="chip" data-value="Réseaux sociaux">Réseaux sociaux</button>
+              <button type="button" class="chip" data-value="Illustration">Illustration</button>
+              <button type="button" class="chip" data-value="Packaging">Packaging</button>
+              <button type="button" class="chip" data-value="Autre">Autre</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Décrivez votre projet en quelques lignes <span>*</span></label>
+            <textarea class="form-textarea" id="projectDesc" placeholder="Qu'est-ce que vous voulez créer ? Pour qui ? Dans quel contexte ? Racontez-moi ça librement." required></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Avez-vous des références / inspirations ?</label>
+            <textarea class="form-textarea" id="references" placeholder="Liens Behance, Pinterest, noms de marques que vous aimez…" style="min-height:80px"></textarea>
+          </div>
+          <div class="form-nav">
+            <button type="button" class="form-nav-back" onclick="prevStep(1)">← Retour</button>
+            <button type="button" class="form-nav-next" onclick="nextStep(3)">Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Étape 3 : Budget & délai -->
+        <div class="form-step-block" data-step="3">
+          <div class="form-group">
+            <label class="form-label">Budget approximatif <span>*</span></label>
+            <div class="chips-group" id="budget">
+              <button type="button" class="chip" data-value="Moins de 200€">Moins de 200€</button>
+              <button type="button" class="chip" data-value="200€ – 500€">200€ – 500€</button>
+              <button type="button" class="chip" data-value="500€ – 1 000€">500€ – 1 000€</button>
+              <button type="button" class="chip" data-value="+ de 1 000€">+ de 1 000€</button>
+              <button type="button" class="chip" data-value="Je ne sais pas encore">Je ne sais pas encore</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Délai souhaité</label>
+            <div class="chips-group" id="deadline">
+              <button type="button" class="chip" data-value="Urgent (< 2 semaines)">Urgent (< 2 semaines)</button>
+              <button type="button" class="chip" data-value="1 mois">1 mois</button>
+              <button type="button" class="chip" data-value="2 à 3 mois">2 à 3 mois</button>
+              <button type="button" class="chip" data-value="Flexible / pas de deadline">Flexible / pas de deadline</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Quelque chose d'important à savoir avant notre appel ?</label>
+            <textarea class="form-textarea" id="extra" placeholder="Contrainte particulière, contexte important, ou juste ce que vous voulez qu'on aborde en priorité — ça m'aide vraiment." style="min-height:90px"></textarea>
+          </div>
+          <div class="form-nav">
+            <button type="button" class="form-nav-back" onclick="prevStep(2)">← Retour</button>
+            <button type="button" class="form-nav-next" onclick="nextStep(4)">Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Étape 4 : Disponibilités & envoi -->
+        <div class="form-step-block" data-step="4">
+          <div class="form-group">
+            <label class="form-label">Format préféré pour l'appel</label>
+            <div class="chips-group" id="format">
+              <button type="button" class="chip" data-value="Téléphone">Téléphone</button>
+              <button type="button" class="chip" data-value="Visio (Google Meet)">Visio (Google Meet)</button>
+              <button type="button" class="chip" data-value="Par email">Par email</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Vos créneaux préférés</label>
+            <div class="chips-group" id="availability">
+              <button type="button" class="chip" data-value="Matin (9h-12h)">Matin (9h-12h)</button>
+              <button type="button" class="chip" data-value="Début d'après-midi (12h-14h)">Début d'après-midi (12h-14h)</button>
+              <button type="button" class="chip" data-value="Après-midi (14h-18h)">Après-midi (14h-18h)</button>
+              <button type="button" class="chip" data-value="Soir (18h-20h)">Soir (18h-20h)</button>
+            </div>
+          </div>
+          <div class="form-what-happens">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+            <p>Une fois envoyé, je lis tout ça attentivement et je vous réponds sous <strong>24h</strong> pour qu'on trouve un créneau ensemble. Promis.</p>
+          </div>
+          <div class="form-nav">
+            <button type="button" class="form-nav-back" onclick="prevStep(3)">← Retour</button>
+            <button type="submit" class="form-nav-submit">Envoyer le questionnaire →</button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Confirmation -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>C'est parti !</h3>
+        <p>J'ai bien reçu vos réponses. Je vous reviens sous <strong>24h</strong> pour qu'on cale notre appel. À très vite !</p>
+        <a href="index.html" class="btn btn-outline">Retour à l'accueil</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+    <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1009.96 474.52" aria-label="Morgan Studio" role="img">
+          <defs><style>
+            .footer-logo .cls-1{transition:fill .35s ease;}
+            .footer-logo .cls-2{transition:fill .35s ease,opacity .35s ease;}
+            #logo-thumb-footer{transition:cx .44s cubic-bezier(.34,1.56,.64,1),fill .35s ease;}
+            #logo-moon-footer,#logo-sun-footer{transition:opacity .35s ease;}
+            @keyframes logoPulseFooter{0%,100%{opacity:.45}50%{opacity:0}}
+            #logo-moon-footer.active,#logo-sun-footer.active{animation:logoPulseFooter 2.5s ease-in-out infinite;}
+          </style></defs>
+          <path class="cls-1" d="M60.51.94c3.23,34.98,12.38,69.4,15.92,104.31,2.8,27.69,2.19,55.87,4.01,83.6,3.69,1.06,2.29-3.42,2.37-5.57,1.14-29.17,1.59-58.41,4.98-87.39C91.39,65.04,101.81.94,101.81.94h62.2v214.97h-42.99c-1.96-62.93,4.66-125.48,11.14-187.89-4.09-1.34-4.2,4.73-4.58,7.33-3.28,22.57-4.92,45.46-8.42,68.03-5.85,37.7-13.85,74.98-20.45,112.51l-33.53-.68c-9.82-41.35-17.23-83.91-23.51-126.17-2.74-18.43-3.89-37.15-6.57-55.53-.4-2.72-.3-5.48-4.03-5.53l10.32,113.89,1.61,74.03H0V.94h60.51Z"/>
+          <path class="cls-1" d="M275.12,1.38c86.42-9.74,150.57,79.45,109.94,157.71-36.92,71.12-138,78.72-185.08,13.68C151.11,105.26,193.14,10.62,275.12,1.38ZM279.87,42.75c-85.21,10.88-70.93,139.75,13.9,133.32,87.15-6.6,75.78-144.77-13.9-133.32Z"/>
+          <path class="cls-1" d="M486.47.94c37.47,5.04,53.11,54.72,35.58,84.94-2.35,4.05-4.88,7.01-7.66,9.29-8.22,6.76-17.84,8.63-21.6,9.25-.99.16-1.82.27-2.37.33,0,.96.01,1.92.02,2.87,10.04.32,20.3,6.86,24.2,16.43l23.58,91.86h-42.99l-23.96-90.69-14.26-.07v90.76h-42.99V.94c22.56,2.19,50.57-2.94,72.45,0ZM457.01,85.33c14.76.96,27.28-1.35,28.74-18.23,1.85-21.44-7.93-28.85-28.74-26.36v44.59Z"/>
+          <path class="cls-1" d="M735.67,80.56h-42.99c-5.68-26.67-32.31-40.13-58.1-38.18-74.68,5.64-75.28,128.01,0,133.69,25.53,1.93,53.76-12.03,59.69-38.18h-54.14v-36.62h100.32v35.83c0,35.21-43.78,69.95-75.42,77.45-100,23.68-162.59-85.74-112.16-167.89,45.2-73.63,172.71-56.22,182.81,33.92Z"/>
+          <path class="cls-1" d="M740.45,215.91L774.79.87l61.18.08,33.45,214.95h-42.99l-6.54-49.19h-29.92l-6.54,49.19h-42.99ZM807.32,35.96h-4.76l-7.96,90.76h20.69l-7.96-90.76Z"/>
+          <path class="cls-1" d="M933.87.94s23.2,89.7,32.2,133.45c3.31,16.08,5.05,33.17,8.44,48.88.56,2.59,0,5.54,3.97,5.58-10.25-62.16-17.99-124.56-15.11-187.91h42.99v214.97h-47.77c-18.99-61.78-35.69-124.16-46.99-187.91-4.11-.6-2.11,2.82-1.92,5.12,2.65,31.84,11.91,65.28,13.86,97.62l1.61,85.18h-42.99V.94h51.7Z"/>
+          <path class="cls-1" d="M108.28,324.19h-39.81c-.09-9.96,2.99-30.32-11.94-30.34-9.83-.01-12.32,11.02-10.97,18.89,4.37,25.56,58.74,51.63,68.33,86.26,6.37,23.03.72,55.04-22.03,67.2C54.84,485.96,0,470.22,0,422.12v-24.68h41.4v27.87c0,1.73,5.22,8.81,7.5,10.01,16.96,8.94,26.64-8.19,23.95-23.96-2.89-16.99-39.53-40.94-52.11-56.16-41.74-50.48-8.83-116.69,58.16-94.78,12.86,4.21,29.38,20.15,29.38,34.32v29.46Z"/>
+          <polygon class="cls-1" points="230.89 257.31 230.89 297.12 197.45 297.12 197.45 472.28 154.46 472.28 154.46 297.12 121.02 297.12 121.02 257.31 230.89 257.31"/>
+          <path class="cls-1" d="M286.63,257.31v166.4c0,10.96,27.07,10.96,27.07,0v-166.4h42.99v171.18c0,31.28-37.29,47.71-64.46,45.36-20.17-1.75-48.59-19.91-48.59-42.17v-174.36h42.99Z"/>
+          <path class="cls-1" d="M375.8,472.28v-214.97h69.27c17.91,0,37.07,22.85,42.63,38.58,8.94,25.29,9.18,108.46,1.18,134.21-5.7,18.36-24.47,42.17-45.41,42.17h-67.68ZM418.79,432.47c14.53,1.52,24.13-2.21,29.11-16.28,4.91-13.86,4.09-71.02,2.81-88.09-1.52-20.24-9.42-33.9-31.92-30.98v135.35Z"/>
+          <rect class="cls-1" x="512.74" y="257.31" width="42.99" height="214.97"/>
+          <path id="toggle-track-footer" class="cls-2" d="M681.56,257.01c-4.3,0-8.68.23-13.12.73-81.94,9.24-124.01,103.89-75.14,171.39,21.79,30.1,55.09,44.63,88.26,44.55h220.06c59.83,0,108.34-48.5,108.34-108.34h0c0-59.83-48.5-108.34-108.34-108.34h-220.06Z"/>
+          <circle id="logo-thumb-footer" cx="681" cy="365.34" r="67" fill="var(--noir)"/>
+          <g id="logo-moon-footer" class="active">
+            <circle cx="681" cy="365" r="38" fill="#BBBFFF"/>
+            <circle cx="699" cy="352" r="30" fill="var(--noir)"/>
+            <circle cx="726" cy="308" r="5" fill="#BBBFFF" opacity="0.75"/>
+            <circle cx="745" cy="327" r="3.5" fill="#BBBFFF" opacity="0.55"/>
+            <circle cx="716" cy="297" r="3" fill="#BBBFFF" opacity="0.6"/>
+          </g>
+          <g id="logo-sun-footer" opacity="0">
+            <circle cx="901" cy="365.34" r="28" fill="#1a1a2e"/>
+            <line x1="901" y1="318" x2="901" y2="305" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="901" y1="412" x2="901" y2="425" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="854" y1="365.34" x2="841" y2="365.34" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="948" y1="365.34" x2="961" y2="365.34" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="867" y1="332" x2="858" y2="323" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="935" y1="399" x2="944" y2="408" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="935" y1="332" x2="944" y2="323" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+            <line x1="867" y1="399" x2="858" y2="408" stroke="#1a1a2e" stroke-width="8" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/morganstudio_0ff/" aria-label="Instagram" class="social-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/morgan-studio-0ff" aria-label="LinkedIn" class="social-btn" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <span>© 2026 Morgan Studio</span>
+          <span>Tous droits réservés</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="./index.html">Accueil</a>
+          <a href="./portfolio.html">Projets</a>
+          <a href="./index.html#services">Services</a>
+          <a href="./index.html#about">À propos</a>
+          <a href="./index.html#faq">FAQ</a>
+        </nav>
+        <div class="footer-legal">
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Politique de confidentialité</a>
+          <a href="cgv.html">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- ══ FOOTER ══ -->
+    
+
+  
+  
+  
+  
+  <script>
+    /* FIX : Email anti-scraping — remplace le lien Cloudflare cassé */
+    document.querySelectorAll('.email-obf').forEach(function(el) {
+      var addr = el.dataset.u + '@' + el.dataset.d;
+      el.querySelector('svg') // keep the svg, update only text node
+      // reconstruct text after svg
+      var nodes = Array.from(el.childNodes);
+      nodes.forEach(function(n) { if (n.nodeType === 3) el.removeChild(n); });
+      el.appendChild(document.createTextNode(' ' + el.dataset.u + ' [at] ' + el.dataset.d));
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = 'mailto:' + addr;
+      });
+      el.addEventListener('mouseenter', function() {
+        var nodes = Array.from(el.childNodes);
+        nodes.forEach(function(n) { if (n.nodeType === 3) el.removeChild(n); });
+        el.appendChild(document.createTextNode(' ' + addr));
+      });
+      el.addEventListener('mouseleave', function() {
+        var nodes = Array.from(el.childNodes);
+        nodes.forEach(function(n) { if (n.nodeType === 3) el.removeChild(n); });
+        el.appendChild(document.createTextNode(' ' + el.dataset.u + ' [at] ' + el.dataset.d));
+      });
+    });
+  </script>
+  <script src="js/carousel.js"></script>
+  
+  
+  
+
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="js/animated-text.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/theme-toggle.js"></script>
+  <script src="js/scrollbar.js"></script>
+  <script>
+  (function () {
+    let currentStep = 1;
+    const totalSteps = 4;
+
+    document.querySelectorAll('.chips-group').forEach(group => {
+      const isMulti = group.id === 'availability';
+      group.querySelectorAll('.chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+          if (isMulti) {
+            chip.classList.toggle('selected');
+          } else {
+            group.querySelectorAll('.chip').forEach(c => c.classList.remove('selected'));
+            chip.classList.add('selected');
+          }
+        });
+      });
+    });
+
+    window.nextStep = function (step) {
+      if (currentStep === 1) {
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const phone   = document.getElementById('phone').value.trim();
+        const company = document.getElementById('company').value.trim();
+        if (!name || !email || !phone || !company) {
+          ['name','phone','email','company'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el && !el.value.trim()) {
+              el.style.borderColor = '#ff6b6b';
+              el.addEventListener('input', () => { el.style.borderColor = ''; }, { once: true });
+            }
+          });
+          return;
+        }
+      }
+      goToStep(step);
+    };
+
+    window.prevStep = function (step) { goToStep(step); };
+
+    function goToStep(step) {
+      const isGoingBack = step < currentStep;
+      document.querySelector(`.form-step-block[data-step="${currentStep}"]`).classList.remove('active');
+      const prevTab = document.querySelector(`.form-step-tab[data-step="${currentStep}"]`);
+      prevTab.classList.remove('active');
+      if (!isGoingBack) prevTab.classList.add('done');
+      else prevTab.classList.remove('done');
+      currentStep = step;
+      document.querySelector(`.form-step-block[data-step="${currentStep}"]`).classList.add('active');
+      const nextTab = document.querySelector(`.form-step-tab[data-step="${currentStep}"]`);
+      nextTab.classList.remove('done');
+      nextTab.classList.add('active');
+      document.getElementById('progressFill').style.width = (currentStep / totalSteps * 100) + '%';
+      document.querySelector('.discovery-form-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    document.getElementById('discoveryForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const btn = document.querySelector('.form-nav-submit');
+      btn.textContent = 'Envoi en cours…';
+      btn.disabled = true;
+
+      // ── Collecte des données du formulaire ──
+      const formData = {
+        name:         document.getElementById('name').value.trim(),
+        email:        document.getElementById('email').value.trim(),
+        telephone:    document.getElementById('phone').value.trim(),
+        activite:     document.getElementById('company').value.trim(),
+        projet:       document.getElementById('projectDesc').value.trim(),
+        references:   document.getElementById('references').value.trim() || 'Aucune',
+        source:       document.getElementById('source').value || 'Non renseigné',
+        budget:       document.querySelector('#budget .chip.selected')?.dataset.value || 'Non renseigné',
+        delai:        document.querySelector('#deadline .chip.selected')?.dataset.value || 'Non renseigné',
+        format_appel: document.querySelector('#format .chip.selected')?.dataset.value || 'Non renseigné',
+        creneaux:     Array.from(document.querySelectorAll('#availability .chip.selected')).map(c => c.dataset.value).join(', ') || 'Non renseigné',
+        type_projet:  document.querySelector('#projectType .chip.selected')?.dataset.value || 'Non renseigné',
+        infos_sup:    document.getElementById('extra').value.trim() || 'Aucune',
+      };
+
+      try {
+        // ── 1. Web3Forms — notification à Morgan Studio ──
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: 'eff550ec-4df2-4d34-b446-b3f042594bd7',
+            subject:    'Nouvelle demande d\'appel découverte — Morgan Studio',
+            from_name:  'Morgan Studio — Formulaire',
+            to:         'contact@morganstudio.fr',
+            replyto:    formData.email,
+            ...formData,
+          }),
+        });
+        const json = await res.json();
+        if (!json.success) throw new Error('Web3Forms: ' + (json.message || 'erreur inconnue'));
+
+        // ── 2. EmailJS — email de confirmation au client ──
+        // ⚠️  Remplacez les valeurs suivantes par vos identifiants EmailJS :
+        //     SERVICE_ID  → emailjs.com → Email Services → votre service
+        //     TEMPLATE_ID → emailjs.com → Email Templates → votre template
+        // Variables disponibles dans votre template :
+        //   {{to_name}}, {{to_email}}, {{activite}}, {{type_projet}},
+        //   {{budget}}, {{delai}}, {{creneaux}}, {{format_appel}}
+        await emailjs.send(
+          'service_bn35xfp',   // ← ex : 'service_abc123'
+          'template_f92b13a',  // ← ex : 'template_xyz789'
+          {
+            to_name:      formData.name,
+            to_email:     formData.email,
+            telephone:    formData.telephone,
+            activite:     formData.activite,
+            type_projet:  formData.type_projet,
+            projet:       formData.projet,
+            references:   formData.references,
+            budget:       formData.budget,
+            delai:        formData.delai,
+            creneaux:     formData.creneaux,
+            format_appel: formData.format_appel,
+            source:       formData.source,
+            infos_sup:    formData.infos_sup,
+            reply_to:     formData.email,
+          }
+        );
+
+        // ── 3. Succès — affichage confirmation ──
+        document.getElementById('discoveryForm').style.display = 'none';
+        document.querySelector('.form-progress').style.display = 'none';
+        document.querySelector('.form-header').style.display = 'none';
+        const stepIndicator = document.getElementById('stepIndicator'); if (stepIndicator) stepIndicator.style.display = 'none';
+        document.getElementById('formSuccess').classList.add('active');
+
+      } catch (err) {
+        console.error('Erreur envoi formulaire :', err);
+        btn.textContent = 'Envoyer →';
+        btn.disabled = false;
+        alert('Une erreur est survenue. Veuillez réessayer ou me contacter directement.');
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
