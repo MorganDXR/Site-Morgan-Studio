@@ -443,10 +443,11 @@ body:has(button:hover) .cursor-ring { width: 42px; height: 42px; border-color: r
     /* ── CTA bas de page ── */
     #cta {
       text-align: center;
-      padding: 120px 20px 160px;
+      padding: 100px 20px;
       background: var(--bleu-clair);
       position: relative;
       overflow: hidden;
+      border-radius: 50px;
     }
 
     .cta-label {
